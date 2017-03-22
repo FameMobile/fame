@@ -54,13 +54,13 @@
 		A80E7EA81E8044C3004DD656 /* fameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A80E7EAC1E8044C3004DD656 /* fameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fameUITests.swift; sourceTree = "<group>"; };
 		A80E7EAE1E8044C3004DD656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A80E7EBA1E804749004DD656 /* SYJRoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = SYJRoleViewController.swift; path = modules/StartYourJourney/SYJRoleViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		A80E7EBB1E804749004DD656 /* SYJRoleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SYJRoleViewController.xib; path = modules/StartYourJourney/SYJRoleViewController.xib; sourceTree = "<group>"; };
-		A80E7EC01E8049F6004DD656 /* LaunchScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreenViewController.xib; path = views/LaunchScreenViewController.xib; sourceTree = "<group>"; };
-		A80E7EC51E806045004DD656 /* SYJInterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = SYJInterestsViewController.swift; path = modules/StartYourJourney/SYJInterestsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		A80E7EC61E806045004DD656 /* SYJInterestsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SYJInterestsViewController.xib; path = modules/StartYourJourney/SYJInterestsViewController.xib; sourceTree = "<group>"; };
+		A80E7EBA1E804749004DD656 /* SYJRoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = SYJRoleViewController.swift; path = modules/StartYourJourney/forms/SYJRoleViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A80E7EBB1E804749004DD656 /* SYJRoleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SYJRoleViewController.xib; path = modules/StartYourJourney/forms/SYJRoleViewController.xib; sourceTree = "<group>"; };
+		A80E7EC01E8049F6004DD656 /* LaunchScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreenViewController.xib; path = common/LaunchScreenViewController.xib; sourceTree = "<group>"; };
+		A80E7EC51E806045004DD656 /* SYJInterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = SYJInterestsViewController.swift; path = modules/StartYourJourney/forms/SYJInterestsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A80E7EC61E806045004DD656 /* SYJInterestsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SYJInterestsViewController.xib; path = modules/StartYourJourney/forms/SYJInterestsViewController.xib; sourceTree = "<group>"; };
 		A80E7EC91E80683F004DD656 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Colors.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		A80E7ECB1E80C5A9004DD656 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = views/GradientView.swift; sourceTree = "<group>"; };
+		A80E7ECB1E80C5A9004DD656 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = common/GradientView.swift; sourceTree = "<group>"; };
 		A866DE231E8210460090E0A6 /* SYJStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = SYJStateMachine.swift; path = modules/StartYourJourney/SYJStateMachine.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A866DE251E82213B0090E0A6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A866DE271E8227690090E0A6 /* SYJUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SYJUserModel.swift; path = modules/StartYourJourney/SYJUserModel.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				A866DE211E820FDB0090E0A6 /* modules */,
-				A80E7EBE1E804754004DD656 /* views */,
+				A80E7EBE1E804754004DD656 /* common */,
 				A80E7E891E8044C3004DD656 /* AppDelegate.swift */,
 				A80E7E931E8044C3004DD656 /* Assets.xcassets */,
 				A80E7E981E8044C3004DD656 /* Info.plist */,
@@ -145,13 +145,13 @@
 			path = fameUITests;
 			sourceTree = "<group>";
 		};
-		A80E7EBE1E804754004DD656 /* views */ = {
+		A80E7EBE1E804754004DD656 /* common */ = {
 			isa = PBXGroup;
 			children = (
 				A80E7EC01E8049F6004DD656 /* LaunchScreenViewController.xib */,
 				A80E7ECB1E80C5A9004DD656 /* GradientView.swift */,
 			);
-			name = views;
+			name = common;
 			sourceTree = "<group>";
 		};
 		A866DE211E820FDB0090E0A6 /* modules */ = {
@@ -168,12 +168,20 @@
 				A866DE231E8210460090E0A6 /* SYJStateMachine.swift */,
 				A866DE271E8227690090E0A6 /* SYJUserModel.swift */,
 				A866DE2A1E82329C0090E0A6 /* SYJBaseViewController.swift */,
+				A866DE2C1E82E0F10090E0A6 /* forms */,
+			);
+			name = StartYourJourney;
+			sourceTree = "<group>";
+		};
+		A866DE2C1E82E0F10090E0A6 /* forms */ = {
+			isa = PBXGroup;
+			children = (
 				A80E7EBA1E804749004DD656 /* SYJRoleViewController.swift */,
 				A80E7EBB1E804749004DD656 /* SYJRoleViewController.xib */,
 				A80E7EC51E806045004DD656 /* SYJInterestsViewController.swift */,
 				A80E7EC61E806045004DD656 /* SYJInterestsViewController.xib */,
 			);
-			name = StartYourJourney;
+			name = forms;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
