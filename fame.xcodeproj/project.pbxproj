@@ -22,6 +22,7 @@
 		A866DE241E8210460090E0A6 /* SYJStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866DE231E8210460090E0A6 /* SYJStateMachine.swift */; };
 		A866DE261E82213B0090E0A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866DE251E82213B0090E0A6 /* Constants.swift */; };
 		A866DE281E8227690090E0A6 /* SYJUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866DE271E8227690090E0A6 /* SYJUserModel.swift */; };
+		A866DE2B1E82329C0090E0A6 /* SYJBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866DE2A1E82329C0090E0A6 /* SYJBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		A866DE231E8210460090E0A6 /* SYJStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = SYJStateMachine.swift; path = modules/StartYourJourney/SYJStateMachine.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A866DE251E82213B0090E0A6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A866DE271E8227690090E0A6 /* SYJUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SYJUserModel.swift; path = modules/StartYourJourney/SYJUserModel.swift; sourceTree = "<group>"; };
+		A866DE2A1E82329C0090E0A6 /* SYJBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SYJBaseViewController.swift; path = modules/StartYourJourney/SYJBaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			children = (
 				A866DE231E8210460090E0A6 /* SYJStateMachine.swift */,
 				A866DE271E8227690090E0A6 /* SYJUserModel.swift */,
+				A866DE2A1E82329C0090E0A6 /* SYJBaseViewController.swift */,
 				A80E7EBA1E804749004DD656 /* SYJRoleViewController.swift */,
 				A80E7EBB1E804749004DD656 /* SYJRoleViewController.xib */,
 				A80E7EC51E806045004DD656 /* SYJInterestsViewController.swift */,
@@ -317,6 +320,7 @@
 				A866DE241E8210460090E0A6 /* SYJStateMachine.swift in Sources */,
 				A80E7ECC1E80C5A9004DD656 /* GradientView.swift in Sources */,
 				A80E7ECA1E80683F004DD656 /* Colors.swift in Sources */,
+				A866DE2B1E82329C0090E0A6 /* SYJBaseViewController.swift in Sources */,
 				A80E7EBC1E804749004DD656 /* SYJRoleViewController.swift in Sources */,
 				A866DE261E82213B0090E0A6 /* Constants.swift in Sources */,
 				A866DE281E8227690090E0A6 /* SYJUserModel.swift in Sources */,

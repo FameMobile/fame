@@ -20,37 +20,26 @@ class SYJStateMachine {
     
     init() {}
     
+    func pushViewController(_ viewController: UIViewController) {
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     func start(from presentingViewController: UIViewController) {
-        let roleVC = SYJRoleViewController { [weak self] role in
-            self?.handleRoleSelection(role: role)
-        }
-        
+        let roleVC = SYJRoleViewController(complete: self.handleRoleSelection)
         let navCon: UINavigationController = UINavigationController(rootViewController: roleVC)
-        navCon.navigationItem.titleView = self.titleView()
         
         let navBar = navCon.navigationBar
         navBar.setBackgroundImage(UIImage(), for: .default)
         navBar.shadowImage = UIImage()
         navBar.isTranslucent = true
+        navBar.tintColor = Color.golden.uiColor
         
         self.navigationController = navCon
-        presentingViewController.present(navCon, animated: true, completion: nil)
-    }
-    
-    fileprivate func titleView() -> UIView {
-        let titleLabel = UILabel(frame: .zero)
-        titleLabel.textColor = Color.golden.uiColor
-        titleLabel.text = "START YOUR JOURNEY"
-        titleLabel.font = UIFont.systemFont(ofSize: 14.0)
-        titleLabel.layoutIfNeeded()
-        titleLabel.sizeToFit()
-        titleLabel.translatesAutoresizingMaskIntoConstraints = true
-        
-        return titleLabel
+        presentingViewController.present(navCon, animated: false, completion: nil)
     }
     
     fileprivate func presentInterests() {
-        self.navigationController?.pushViewController(SYJInterestsViewController(), animated: true)
+        self.pushViewController(SYJInterestsViewController(complete: self.handleInterestsSelection))
     }
     
     fileprivate func presentAccountDetails() {
@@ -67,17 +56,17 @@ class SYJStateMachine {
 }
 
 extension SYJStateMachine {
-    func handleRoleSelection(role: Role) {
-        self.user.role = role
+    func handleRoleSelection(value: Any?) {
+        self.user.role = value as? Role
         self.presentInterests()
     }
     
-    private func handleInterestSelection(interests: [String]) {
-        self.user.interests = interests
+    func handleInterestsSelection(value: Any?) {
+        self.user.interests = value as? [String]
         self.presentAccountDetails()
     }
     
-    private func handleAccountDetails() {
+    func handleAccountDetails(value: Any?) {
         if self.isArtist {
             self.presentProfile()
         } else {

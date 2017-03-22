@@ -8,14 +8,9 @@
 
 import UIKit
 
-class SYJInterestsViewController: UIViewController {
+class SYJInterestsViewController: SYJBaseViewController {
     
     @IBOutlet weak var gradientView: GradientView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }        
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

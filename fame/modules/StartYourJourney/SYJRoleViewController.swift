@@ -8,21 +8,10 @@
 
 import UIKit
 
-class SYJRoleViewController: UIViewController {
+class SYJRoleViewController: SYJBaseViewController {
 
     @IBOutlet weak var artistButton: UIButton!
-    @IBOutlet weak var fanButton: UIButton!
-    
-    let complete: (_ role: Role) -> Void
-    
-    required init(complete: @escaping (_ role: Role) -> Void) {
-        self.complete = complete
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    @IBOutlet weak var fanButton: UIButton!        
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

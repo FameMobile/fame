@@ -13,6 +13,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var startYourJourney: SYJStateMachine?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         UIApplication.shared.statusBarStyle = .lightContent
@@ -23,8 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.makeKeyAndVisible()
         self.window = window
         
-        let startYourJourney = SYJStateMachine()
-        startYourJourney.start(from: blankViewController)
+        self.startYourJourney = SYJStateMachine()
+        self.startYourJourney?.start(from: blankViewController)
         
         return true
     }
