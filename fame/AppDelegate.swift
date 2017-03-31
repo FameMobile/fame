@@ -19,16 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.statusBarStyle = .lightContent
         
         let window = UIWindow.init(frame: UIScreen.main.bounds)
-        let blankViewController = UIViewController()
-        window.rootViewController = blankViewController
+        let rootNavigationController = UINavigationController(navigationBarClass: TransparentNavigationBar.self, toolbarClass: nil)
+        window.rootViewController = rootNavigationController
         window.makeKeyAndVisible()
         self.window = window
         
-        self.startYourJourney = SYJStateMachine()
-        self.startYourJourney?.start(from: blankViewController)
+        if self.startYourJourney == nil {
+            self.startYourJourney = SYJStateMachine()
+            self.startYourJourney?.delegate = self
+            self.startYourJourney?.start(from: rootNavigationController)
+            
+        }
         
         return true
-    }
+    }        
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -99,5 +103,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+}
+
+extension AppDelegate: DismissDelegate {
+    func dismiss() {
+        self.startYourJourney = nil
+    }
 }
 

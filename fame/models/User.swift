@@ -1,5 +1,5 @@
 //
-//  SYJUserModel.swift
+//  User.swift
 //  fame
 //
 //  Created by Jeff Cohen on 3/21/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct UserModel {
+class User {
     var role: Role?
     var interests: [String]?
     var email: String?
