@@ -11,28 +11,24 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-    var startYourJourney: SYJStateMachine?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         UIApplication.shared.statusBarStyle = .lightContent
         
+        let rootNavigationController = UINavigationController(navigationBarClass: TransparentNavigationBar.self, toolbarClass: nil, hideStatusBarBackground: false)
+        
         let window = UIWindow.init(frame: UIScreen.main.bounds)
-        let rootNavigationController = UINavigationController(navigationBarClass: TransparentNavigationBar.self, toolbarClass: nil)
         window.rootViewController = rootNavigationController
         window.makeKeyAndVisible()
         self.window = window
         
-        if self.startYourJourney == nil {
-            self.startYourJourney = SYJStateMachine()
-            self.startYourJourney?.delegate = self
-            self.startYourJourney?.start(from: rootNavigationController)
-            
-        }
+        rootNavigationController.pushViewController(SignInViewController(), animated: true)
         
         return true
-    }        
+    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -103,11 +99,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
-}
-
-extension AppDelegate: DismissDelegate {
-    func dismiss() {
-        self.startYourJourney = nil
-    }
 }
 

@@ -13,9 +13,12 @@ class TransparentNavigationBar: UINavigationBar {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setBackgroundImage(UIImage(), for: .default)
-        self.shadowImage = UIImage()
+        //self.shadowImage = UIImage()
         self.isTranslucent = true
         self.tintColor = Color.golden.uiColor
+        self.backgroundColor = Color.purple.uiColor
+        
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

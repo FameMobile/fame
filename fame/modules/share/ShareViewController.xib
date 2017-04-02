@@ -34,6 +34,6 @@
         </view>
     </objects>
     <resources>
-        <image name="share" width="359" height="526"/>
+        <image name="share" width="414" height="736"/>
     </resources>
 </document>

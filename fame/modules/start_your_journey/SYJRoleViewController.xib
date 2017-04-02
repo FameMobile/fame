@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,20 +25,18 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="role_select" translatesAutoresizingMaskIntoConstraints="NO" id="WpQ-J4-6hL">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSd-Q3-6Tw">
-                    <rect key="frame" x="0.0" y="428" width="375" height="33"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSd-Q3-6Tw">
+                    <rect key="frame" x="0.0" y="489.5" width="375" height="22"/>
+                    <state key="normal" image="role_fan">
                         <color key="titleColor" red="0.87058823529999996" green="0.6705882353" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="routeFan:" destination="-1" eventType="touchUpInside" id="sjQ-c5-eVs"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ks0-UT-dmW">
-                    <rect key="frame" x="0.0" y="150.5" width="375" height="33"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ks0-UT-dmW">
+                    <rect key="frame" x="0.0" y="156" width="375" height="22"/>
+                    <state key="normal" image="role_artist">
                         <color key="titleColor" red="0.87058823529999996" green="0.6705882353" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
@@ -55,13 +53,15 @@
                 <constraint firstItem="WpQ-J4-6hL" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="KAx-Vg-NeX"/>
                 <constraint firstItem="WpQ-J4-6hL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="L6R-GV-tiP"/>
                 <constraint firstItem="WpQ-J4-6hL" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="S9h-rO-ERI"/>
-                <constraint firstItem="pSd-Q3-6Tw" firstAttribute="centerY" secondItem="WpQ-J4-6hL" secondAttribute="bottom" multiplier="2:3" id="YSR-tF-K5d"/>
+                <constraint firstItem="pSd-Q3-6Tw" firstAttribute="centerY" secondItem="WpQ-J4-6hL" secondAttribute="bottom" multiplier="3:4" id="YSR-tF-K5d"/>
                 <constraint firstItem="pSd-Q3-6Tw" firstAttribute="leading" secondItem="WpQ-J4-6hL" secondAttribute="leading" id="x4A-aj-ieD"/>
             </constraints>
             <point key="canvasLocation" x="81.5" y="53.5"/>
         </view>
     </objects>
     <resources>
-        <image name="role_select" width="642" height="1088"/>
+        <image name="role_artist" width="204" height="11"/>
+        <image name="role_fan" width="134" height="11"/>
+        <image name="role_select" width="425" height="737"/>
     </resources>
 </document>

@@ -9,15 +9,21 @@
 import UIKit
 
 public enum Color {
-    case darkestPurple
-    case lightestPurple
+    case black
+    case clear
     case golden
+    case gray
+    case purple
+    case white
     
     public var uiColor: UIColor {
         switch self {
-        case .darkestPurple: return UIColor(red: 0.15, green: 0.12, blue: 0.14, alpha: 1)
-        case .lightestPurple: return UIColor(red: 0.19, green: 0.10, blue: 0.19, alpha: 1)
+        case .black: return UIColor.black
+        case .clear: return UIColor.clear
         case .golden: return UIColor(red: 0.87, green: 0.67, blue: 0.32, alpha: 1)
+        case .gray: return UIColor(red: 0.73, green: 0.73, blue: 0.73, alpha: 1)
+        case .purple: return UIColor(red: 0.19, green: 0.09, blue: 0.19, alpha: 1)
+        case .white: return UIColor.white
         }
     }
     

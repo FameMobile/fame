@@ -36,7 +36,7 @@ class SYJStateMachine: DismissDelegate {
     }
     
     fileprivate func presentResume() {
-        self.pushViewController(SYJResumeViewController(complete: self.handleResume))
+        self.pushViewController(SYJResumeViewController(viewTitle: "Resume", complete: self.handleResume))
     }
     
     fileprivate func presentAccount() {
@@ -54,7 +54,7 @@ class SYJStateMachine: DismissDelegate {
     }
     
     func dismiss() {
-        self.navigationController?.setViewControllers([MainViewController(), ShareViewController()], animated: true)
+        self.navigationController?.setViewControllers([MainTabBarController(), ShareViewController(viewTitle: "Share")], animated: true)
         self.delegate?.dismiss()
     }
 }

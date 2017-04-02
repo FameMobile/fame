@@ -8,7 +8,5 @@
 
 import Foundation
 
-public enum Role: String {
-    case artist = "Artist"
-    case fan = "Fan"
-}
+typealias CompleteWithValue = (_ value: Any?) -> Void
+

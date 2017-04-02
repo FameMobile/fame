@@ -18,7 +18,22 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="EeT-iL-WOl">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account" translatesAutoresizingMaskIntoConstraints="NO" id="xn4-ML-D40">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xn4-ML-D40" firstAttribute="height" secondItem="EeT-iL-WOl" secondAttribute="height" id="I4L-Qa-6Rq"/>
+                <constraint firstItem="xn4-ML-D40" firstAttribute="leading" secondItem="EeT-iL-WOl" secondAttribute="leading" id="XMU-Zd-Jul"/>
+                <constraint firstItem="xn4-ML-D40" firstAttribute="width" secondItem="EeT-iL-WOl" secondAttribute="width" id="sJA-Wl-K7b"/>
+                <constraint firstItem="xn4-ML-D40" firstAttribute="top" secondItem="EeT-iL-WOl" secondAttribute="top" id="wMU-Qb-OFK"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="account" width="434" height="735"/>
+    </resources>
 </document>

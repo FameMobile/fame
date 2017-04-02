@@ -10,30 +10,29 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-    var navigationTitle: String?
-    
-    init(navigationTitle: String? = nil, viewTitle: String? = nil) {
-        super.init(nibName: nil, bundle: nil)
-        self.navigationTitle = navigationTitle
-        self.title = viewTitle
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    var complete: CompleteWithValue?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 0.19, green: 0.09, blue: 0.19, alpha: 1)
-        if let navTitle = self.navigationTitle {
-            self.navigationItem.titleView = BaseTitleLabel(title: navTitle)
+        self.view.backgroundColor = Color.purple.uiColor
+        
+        if let child = self.childViewController() {
+            self.add(childViewController: child)
+        }
+        
+        if let rightButton = self.rightBarButtonItem() {
+            self.navigationItem.rightBarButtonItem = rightButton
         }
     }
-
-    func add(childViewController: UIViewController) {
-        self.addChildViewController(childViewController)
-        childViewController.view.frame = self.view.frame
-        self.view.addSubview(childViewController.view)
-        childViewController.didMove(toParentViewController: self)
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setNavTitle(self.navigationTitle())
     }
+}
+
+extension BaseViewController: NavigationControllerChild {
+    func navigationTitle() -> String? { return nil }
+    func childViewController() -> BaseViewController? { return nil }
+    func rightBarButtonItem() -> UIBarButtonItem? { return nil}
 }
