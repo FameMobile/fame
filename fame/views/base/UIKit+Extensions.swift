@@ -19,6 +19,7 @@ extension UIViewController {
     }
 }
 
+extension UIImage: Colorful {}
 extension UILabel: DefaultLabel {}
 extension UINavigationController: StatusBarBackground {}
 extension UINavigationBar: Hideable {}

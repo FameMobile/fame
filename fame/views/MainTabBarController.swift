@@ -14,8 +14,10 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         self.navigationItem.hidesBackButton = true
         
         self.tabBar.barStyle = .black
-        self.tabBar.backgroundColor = Color.black.uiColor
+        //self.tabBar.backgroundColor = Color.black.uiColor
         self.tabBar.isTranslucent = false
+        self.tabBar.unselectedItemTintColor = Color.grayDark.uiColor
+        self.tabBar.tintColor = Color.gray.uiColor
         
         self.viewControllers = self.createTabs()
         

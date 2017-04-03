@@ -18,6 +18,16 @@ class SignInViewController: BaseViewController {
         self.navigationItem.hidesBackButton = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.hide()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.show()
+    }
+    
     @IBAction func signIn(_ sender: UIButton) {
         self.navigationController?.pushViewController(MainTabBarController(), animated: true)
     }

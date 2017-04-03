@@ -22,3 +22,27 @@ extension Hideable where Self: UINavigationBar {
         self.isHidden = true
     }
 }
+
+protocol Colorful {
+    static func withColor(_ color: UIColor) -> UIImage
+}
+
+extension Colorful where Self: UIImage {
+    static func withColor(_ color: UIColor) -> UIImage {
+        let pixelScale = UIScreen.main.scale
+        let pixelSize = 1 / pixelScale
+        let fillSize = CGSize(width: pixelSize, height: pixelSize)
+        let fillRect = CGRect(origin: CGPoint.zero, size: fillSize)
+        UIGraphicsBeginImageContextWithOptions(fillRect.size, false, pixelScale)
+        if let graphicsContext = UIGraphicsGetCurrentContext() {
+            graphicsContext.setFillColor(color.cgColor)
+            graphicsContext.fill(fillRect)
+            graphicsContext.setAlpha(1)
+        }
+        if let image = UIGraphicsGetImageFromCurrentImageContext() {
+            UIGraphicsEndImageContext()            
+            return image
+        }
+        return UIImage()        
+    }
+}
