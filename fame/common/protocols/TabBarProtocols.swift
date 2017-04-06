@@ -25,28 +25,27 @@ extension Tab where Self: UIViewController {
 }
 
 protocol Separators {
-    func addSeparators(color: UIColor, width: CGFloat)
+    func addSeparators(color: Color, width: CGFloat)
 }
 
 extension Separators where Self: UITabBar {
     func addDefaultSeparators() {
-        addSeparators(color: Color.grayDark.uiColor, width: 1)
+        addSeparators(color: Color.grayDark, width: StandardBorderThickness)
     }
     
-    func addSeparators(color: UIColor, width: CGFloat) {
+    func addSeparators(color: Color, width separatorWidth: CGFloat) {
         if let items = self.items {
-            let pixelScale = UIScreen.main.scale
             let itemWidth = floor(self.frame.size.width / CGFloat(items.count))
-            // this is the separator width.  0.5px matches the line at the top of the tab bar
-            let separatorWidth: CGFloat = width
+            let verticalInset = CGFloat(7.5)
             
             // iterate through the items in the Tab Bar, except the last one
             for i in 0...(items.count - 1) {
                 // make a new separator at the end of each tab bar item
-                let separator = UIView(frame: CGRect(x: itemWidth * CGFloat(i + 1) - CGFloat(separatorWidth / pixelScale), y: 7.5, width: CGFloat(separatorWidth), height: self.frame.size.height - 15))
-                
-                separator.backgroundColor = color
-                separator.alpha = 1
+                let separator = UIView.color(color,
+                                             x: itemWidth * CGFloat(i + 1) - separatorWidth,
+                                             y: verticalInset,
+                                             width: separatorWidth,
+                                             height: self.frame.size.height - (verticalInset * 2))
                 self.addSubview(separator)
             }
         }

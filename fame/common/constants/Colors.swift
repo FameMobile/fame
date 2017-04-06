@@ -15,6 +15,7 @@ public enum Color {
     case gray
     case grayDark
     case purple
+    case purpleLight
     case white
     
     public var uiColor: UIColor {
@@ -25,6 +26,7 @@ public enum Color {
         case .gray: return UIColor(red: 0.73, green: 0.73, blue: 0.73, alpha: 1)
         case .grayDark: return UIColor(red: 0.27, green: 0.24, blue: 0.27, alpha: 1)
         case .purple: return UIColor(red: 0.19, green: 0.09, blue: 0.19, alpha: 1)
+        case .purpleLight: return UIColor(red: 0.26, green: 0.18, blue: 0.24, alpha: 1)
         case .white: return UIColor.white
         }
     }

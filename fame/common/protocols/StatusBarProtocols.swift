@@ -9,8 +9,7 @@
 import UIKit
 
 protocol StatusBarBackground {
-    func showStatusBarBackground()
-    func hideStatusBarBackground()
+    var statusBarBackground: UIView? { get }
 }
 
 extension StatusBarBackground where Self: UINavigationController {
@@ -20,28 +19,18 @@ extension StatusBarBackground where Self: UINavigationController {
     }
     
     fileprivate func addStatusBarBackground(hidden: Bool) {
-        let backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIApplication.shared.statusBarFrame.size.height))
-        backgroundView.backgroundColor = Color.purple.uiColor
+        let backgroundView = UIView.color(Color.purple,
+                                          x: 0,
+                                          y: 0,
+                                          width: UIScreen.main.bounds.size.width,
+                                          height: UIApplication.shared.statusBarFrame.size.height)        
         backgroundView.tag = Tag.statusBarBackground.rawValue
         backgroundView.isHidden = hidden
         
         view.addSubview(backgroundView)
     }
     
-    // A status bar background view is used to set the background color
-    // If a view controller has content (i.e. image) that is expected to go behind the
-    // status bar, then the background view should be hidden
-    fileprivate func toggleVisibility(hidden: Bool) {
-        if let statusBarBackground = self.view.viewWithTag(Tag.statusBarBackground.rawValue) {
-            statusBarBackground.isHidden = hidden
-        }
-    }
-    
-    func hideStatusBarBackground() {
-        self.toggleVisibility(hidden: true)
-    }
-    
-    func showStatusBarBackground() {
-        self.toggleVisibility(hidden: false)
+    var statusBarBackground: UIView? {
+        return self.view.viewWithTag(Tag.statusBarBackground.rawValue)
     }
 }

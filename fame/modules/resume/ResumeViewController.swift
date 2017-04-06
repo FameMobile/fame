@@ -9,5 +9,5 @@
 import UIKit
 
 class ResumeViewController: BaseViewController {
-
+    override func navigationTitle() -> String? { return "RESUME" }
 }

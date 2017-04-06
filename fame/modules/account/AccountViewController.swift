@@ -9,5 +9,7 @@
 import UIKit
 
 class AccountViewController: BaseViewController {
-    
+    override func navigationTitle() -> String? {
+        return "ACCOUNT"
+    }
 }

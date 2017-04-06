@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SYJRoleViewController: BaseViewController, SYJForm {
+class SYJRoleViewController: BaseViewController {
 
     @IBOutlet weak var artistButton: UIButton!
     @IBOutlet weak var fanButton: UIButton!        
@@ -16,13 +16,13 @@ class SYJRoleViewController: BaseViewController, SYJForm {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.hide()
-        self.navigationController?.hideStatusBarBackground()
+        self.navigationController?.statusBarBackground?.hide()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBar.show()
-        self.navigationController?.showStatusBarBackground()
+        self.navigationController?.statusBarBackground?.show()
     }
     
     @IBAction func routeArtist(_ sender: UIButton) {
@@ -32,6 +32,4 @@ class SYJRoleViewController: BaseViewController, SYJForm {
     @IBAction func routeFan(_ sender: UIButton) {
         self.complete?(Role.fan)
     }
-
-    func submit() {/*Not used, leaving empty*/}
 }

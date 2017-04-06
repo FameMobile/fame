@@ -31,9 +31,10 @@
 		A828FB6A1E90A6D70065AC0C /* ViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A828FB691E90A6D70065AC0C /* ViewProtocols.swift */; };
 		A828FB6D1E90AB8C0065AC0C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A828FB6B1E90AB8C0065AC0C /* SignInViewController.swift */; };
 		A828FB6E1E90AB8C0065AC0C /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A828FB6C1E90AB8C0065AC0C /* SignInViewController.xib */; };
+		A828FB711E92BC480065AC0C /* UITools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A828FB701E92BC480065AC0C /* UITools.swift */; };
 		A866DE241E8210460090E0A6 /* SYJStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866DE231E8210460090E0A6 /* SYJStateMachine.swift */; };
 		A866DE281E8227690090E0A6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866DE271E8227690090E0A6 /* User.swift */; };
-		A866DE2B1E82329C0090E0A6 /* SYJForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866DE2A1E82329C0090E0A6 /* SYJForms.swift */; };
+		A866DE2B1E82329C0090E0A6 /* SYJViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866DE2A1E82329C0090E0A6 /* SYJViewControllers.swift */; };
 		A866DE3A1E82FBA10090E0A6 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866DE381E82FBA10090E0A6 /* AccountViewController.swift */; };
 		A866DE3B1E82FBA10090E0A6 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A866DE391E82FBA10090E0A6 /* AccountViewController.xib */; };
 		A8DB015A1E85970C00F5FCD8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DB01581E85970C00F5FCD8 /* MainTabBarController.swift */; };
@@ -99,9 +100,10 @@
 		A828FB691E90A6D70065AC0C /* ViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProtocols.swift; sourceTree = "<group>"; };
 		A828FB6B1E90AB8C0065AC0C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A828FB6C1E90AB8C0065AC0C /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		A828FB701E92BC480065AC0C /* UITools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITools.swift; sourceTree = "<group>"; };
 		A866DE231E8210460090E0A6 /* SYJStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SYJStateMachine.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A866DE271E8227690090E0A6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = models/User.swift; sourceTree = "<group>"; };
-		A866DE2A1E82329C0090E0A6 /* SYJForms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYJForms.swift; sourceTree = "<group>"; };
+		A866DE2A1E82329C0090E0A6 /* SYJViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYJViewControllers.swift; sourceTree = "<group>"; };
 		A866DE381E82FBA10090E0A6 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		A866DE391E82FBA10090E0A6 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
 		A8DB01581E85970C00F5FCD8 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -189,7 +191,6 @@
 				A866DE371E82F8360090E0A6 /* models */,
 				A866DE211E820FDB0090E0A6 /* modules */,
 				A80E7EBE1E804754004DD656 /* common */,
-				A8DB01761E85A12300F5FCD8 /* views */,
 				A80E7E891E8044C3004DD656 /* AppDelegate.swift */,
 				A80E7E931E8044C3004DD656 /* Assets.xcassets */,
 				A80E7E981E8044C3004DD656 /* Info.plist */,
@@ -219,9 +220,13 @@
 		A80E7EBE1E804754004DD656 /* common */ = {
 			isa = PBXGroup;
 			children = (
-				A828FB681E8EC5590065AC0C /* delegates */,
+				A8DB01931E885EDF00F5FCD8 /* TransparentNavigationBar.swift */,
+				A8FDAE301E8D899A003E09CD /* BaseViewController.swift */,
+				A828FB541E8DEF970065AC0C /* UIKit+Extensions.swift */,
 				A8DB01711E85A0AB00F5FCD8 /* constants */,
+				A828FB681E8EC5590065AC0C /* delegates */,
 				A8DB01831E85AB9300F5FCD8 /* protocols */,
+				A828FB6F1E92BC2D0065AC0C /* utilities */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -261,9 +266,19 @@
 			path = delegates;
 			sourceTree = "<group>";
 		};
+		A828FB6F1E92BC2D0065AC0C /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A828FB701E92BC480065AC0C /* UITools.swift */,
+			);
+			path = utilities;
+			sourceTree = "<group>";
+		};
 		A866DE211E820FDB0090E0A6 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				A8DB01771E85A14800F5FCD8 /* LaunchScreenViewController.xib */,
+				A8DB01581E85970C00F5FCD8 /* MainTabBarController.swift */,
 				A828FB471E8DDAAD0065AC0C /* discover */,
 				A828FB461E8DDA9F0065AC0C /* road_to_fame */,
 				A828FB451E8DDA920065AC0C /* trending */,
@@ -279,7 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				A866DE231E8210460090E0A6 /* SYJStateMachine.swift */,
-				A866DE2A1E82329C0090E0A6 /* SYJForms.swift */,
+				A866DE2A1E82329C0090E0A6 /* SYJViewControllers.swift */,
 				A80E7EBA1E804749004DD656 /* SYJRoleViewController.swift */,
 				A80E7EBB1E804749004DD656 /* SYJRoleViewController.xib */,
 			);
@@ -294,16 +309,6 @@
 			name = models;
 			sourceTree = "<group>";
 		};
-		A8DB01601E859D7A00F5FCD8 /* base */ = {
-			isa = PBXGroup;
-			children = (
-				A8DB01931E885EDF00F5FCD8 /* TransparentNavigationBar.swift */,
-				A8FDAE301E8D899A003E09CD /* BaseViewController.swift */,
-				A828FB541E8DEF970065AC0C /* UIKit+Extensions.swift */,
-			);
-			path = base;
-			sourceTree = "<group>";
-		};
 		A8DB01711E85A0AB00F5FCD8 /* constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,16 +317,6 @@
 				A828FB641E8EC1A60065AC0C /* Enums.swift */,
 			);
 			name = constants;
-			sourceTree = "<group>";
-		};
-		A8DB01761E85A12300F5FCD8 /* views */ = {
-			isa = PBXGroup;
-			children = (
-				A8DB01581E85970C00F5FCD8 /* MainTabBarController.swift */,
-				A8DB01771E85A14800F5FCD8 /* LaunchScreenViewController.xib */,
-				A8DB01601E859D7A00F5FCD8 /* base */,
-			);
-			path = views;
 			sourceTree = "<group>";
 		};
 		A8DB01831E85AB9300F5FCD8 /* protocols */ = {
@@ -674,6 +669,7 @@
 				A828FB551E8DEF970065AC0C /* UIKit+Extensions.swift in Sources */,
 				A8DB01741E85A11C00F5FCD8 /* Colors.swift in Sources */,
 				A8FDAE371E8DA291003E09CD /* DismissDelegate.swift in Sources */,
+				A828FB711E92BC480065AC0C /* UITools.swift in Sources */,
 				A828FB671E8EC2270065AC0C /* LabelProtocols.swift in Sources */,
 				A8DB01971E887EAC00F5FCD8 /* ShareViewController.swift in Sources */,
 				A8DB015A1E85970C00F5FCD8 /* MainTabBarController.swift in Sources */,
@@ -687,7 +683,7 @@
 				A866DE241E8210460090E0A6 /* SYJStateMachine.swift in Sources */,
 				A828FB5D1E8EA9590065AC0C /* NavigationProtocols.swift in Sources */,
 				A828FB631E8EC1360065AC0C /* TabBarProtocols.swift in Sources */,
-				A866DE2B1E82329C0090E0A6 /* SYJForms.swift in Sources */,
+				A866DE2B1E82329C0090E0A6 /* SYJViewControllers.swift in Sources */,
 				A828FB6D1E90AB8C0065AC0C /* SignInViewController.swift in Sources */,
 				A8FDAE311E8D899A003E09CD /* BaseViewController.swift in Sources */,
 				A80E7EBC1E804749004DD656 /* SYJRoleViewController.swift in Sources */,

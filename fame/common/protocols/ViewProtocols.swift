@@ -8,12 +8,13 @@
 
 import UIKit
 
+// MARK - Hideable
 protocol Hideable {
     func show()
     func hide()
 }
 
-extension Hideable where Self: UINavigationBar {
+extension Hideable where Self: UIView {
     func show() {
         self.isHidden = false
     }
@@ -23,26 +24,72 @@ extension Hideable where Self: UINavigationBar {
     }
 }
 
+// MARK - Colorful
 protocol Colorful {
-    static func withColor(_ color: UIColor) -> UIImage
+    static func border(color: Color, width: CGFloat) -> UIView
+    static func color(_ color: Color, x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) -> UIView
+    var uiImage: UIImage? { get }
 }
 
-extension Colorful where Self: UIImage {
-    static func withColor(_ color: UIColor) -> UIImage {
-        let pixelScale = UIScreen.main.scale
-        let pixelSize = 1 / pixelScale
-        let fillSize = CGSize(width: pixelSize, height: pixelSize)
-        let fillRect = CGRect(origin: CGPoint.zero, size: fillSize)
-        UIGraphicsBeginImageContextWithOptions(fillRect.size, false, pixelScale)
-        if let graphicsContext = UIGraphicsGetCurrentContext() {
-            graphicsContext.setFillColor(color.cgColor)
-            graphicsContext.fill(fillRect)
-            graphicsContext.setAlpha(1)
+extension Colorful where Self: UIView {
+    static var defaultBorderColor: Color { return Color.grayDark }
+    static var defaultBorderThickness: CGFloat { return StandardBorderThickness }
+    
+    static func border(color: Color = Self.defaultBorderColor, width: CGFloat = Self.defaultBorderThickness) -> UIView {
+        return self.color(color, x: 0, y: 0, width: width, height: width)
+    }
+    
+    static func color(_ color: Color, x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) -> UIView {
+        let fillRect = CGRect(x: x, y: y, width: width, height: height)
+        let view = self.init(frame: fillRect)
+        view.backgroundColor = color.uiColor
+        view.alpha = 1
+        return view
+    }
+    
+    var uiImage: UIImage? {
+        UIGraphicsBeginImageContextWithOptions(self.frame.size, self.isOpaque, UIScreen.main.scale)
+        if let currentContext = UIGraphicsGetCurrentContext() {
+            currentContext.setAlpha(self.alpha)
+            self.layer.render(in: currentContext)
+            
+            if let bgColor = self.backgroundColor?.cgColor {
+                currentContext.setFillColor(bgColor)
+            }
+            
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            if let cgImage = image?.cgImage {
+                return UIImage(cgImage: cgImage)
+            }
         }
-        if let image = UIGraphicsGetImageFromCurrentImageContext() {
-            UIGraphicsEndImageContext()            
-            return image
-        }
-        return UIImage()        
+        return nil
     }
 }
+
+// MARK - Circular
+protocol Circular {
+    //static func circle(image: UIImage?, backgroundColor: Color) -> Self
+    func makeCircular()
+}
+
+extension Circular where Self: UIView {
+    func makeCircular() {
+        self.layer.cornerRadius = self.layer.frame.size.width / 2
+        self.clipsToBounds = true
+    }
+}
+
+/*extension Circular where Self: UIImageView {
+    static func circle(image: UIImage?, backgroundColor: Color = Color.clear) -> UIImageView {
+        let view = self.init(image: image)
+        view.makeCircular()
+        view.backgroundColor = backgroundColor.uiColor
+        return view
+    }
+    func makeCircular() {
+        self.layer.cornerRadius = self.layer.frame.size.width/2
+        self.clipsToBounds = true
+    }
+}*/

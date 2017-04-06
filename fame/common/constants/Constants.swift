@@ -6,7 +6,17 @@
 //  Copyright © 2017 Fame. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
+// MARK - Closure Aliases
 typealias CompleteWithValue = (_ value: Any?) -> Void
 
+
+// MARK - UI Values
+var StandardBorderThickness: CGFloat {
+    get {
+        let standardWidth = CGFloat(1)
+        let pixelScale = UIScreen.main.scale
+        return standardWidth / pixelScale
+    }
+}
