@@ -6,7 +6,8 @@ target 'fame' do
   use_frameworks!
 
   # Pods for fame
-  pod 'Koloda', '~> 4.0'
+  pod 'Koloda'
+  pod 'PureLayout'
 
   target 'fameTests' do
     inherit! :search_paths

@@ -6,17 +6,16 @@
 //  Copyright © 2017 Fame. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class User {
+struct User {
+    
     var role: Role?
-    var interests: [String]?
+    var resume: Resume?
+    
+    //Account Info
     var email: String?
     var password: String?
     var firstName: String?
     var lastName: String?
-    var profession: String?
-    var genre: String?
-    var story: String?
-    var media: [Any]?
 }

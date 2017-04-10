@@ -20,7 +20,7 @@ extension NavigationControllerChild where Self: UIViewController {
     func setNavTitle(_ title: String?) {
         if let title = title {
             if let _ = self.parent as? UINavigationController {
-                self.navigationItem.titleView = UILabel(title: title)
+                self.navigationItem.titleView = UILabel(title: title, font: BasicSans.bold.font(ofSize: 15.0))
             } else if let parent = self.parent as? NavigationControllerChild {
                 parent.setNavTitle(title)
             }

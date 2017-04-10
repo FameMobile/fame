@@ -32,11 +32,40 @@
 		A828FB6D1E90AB8C0065AC0C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A828FB6B1E90AB8C0065AC0C /* SignInViewController.swift */; };
 		A828FB6E1E90AB8C0065AC0C /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A828FB6C1E90AB8C0065AC0C /* SignInViewController.xib */; };
 		A828FB711E92BC480065AC0C /* UITools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A828FB701E92BC480065AC0C /* UITools.swift */; };
+		A84DCEE51E96F4580097BD69 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84DCEE41E96F4580097BD69 /* Artist.swift */; };
+		A84DCEE71E96F6080097BD69 /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84DCEE61E96F6080097BD69 /* Resume.swift */; };
+		A84DCEEA1E96F7AB0097BD69 /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84DCEE91E96F7AB0097BD69 /* FakeData.swift */; };
+		A84DCEEC1E96FA220097BD69 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84DCEEB1E96FA220097BD69 /* Location.swift */; };
+		A84DCEEE1E96FF490097BD69 /* ArtistRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84DCEED1E96FF490097BD69 /* ArtistRank.swift */; };
 		A866DE241E8210460090E0A6 /* SYJStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866DE231E8210460090E0A6 /* SYJStateMachine.swift */; };
 		A866DE281E8227690090E0A6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866DE271E8227690090E0A6 /* User.swift */; };
 		A866DE2B1E82329C0090E0A6 /* SYJViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866DE2A1E82329C0090E0A6 /* SYJViewControllers.swift */; };
 		A866DE3A1E82FBA10090E0A6 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866DE381E82FBA10090E0A6 /* AccountViewController.swift */; };
 		A866DE3B1E82FBA10090E0A6 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A866DE391E82FBA10090E0A6 /* AccountViewController.xib */; };
+		A88E6EA61E99E6AA000BF934 /* NibDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88E6EA51E99E6AA000BF934 /* NibDesignableView.swift */; };
+		A88E6EA81E99EEF3000BF934 /* ArtistCardView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88E6EA71E99EEF3000BF934 /* ArtistCardView2.swift */; };
+		A88E6EB11E9B2304000BF934 /* BasicSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAA1E9B2304000BF934 /* BasicSans-Bold.otf */; };
+		A88E6EB21E9B2304000BF934 /* BasicSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAA1E9B2304000BF934 /* BasicSans-Bold.otf */; };
+		A88E6EB31E9B2304000BF934 /* BasicSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAA1E9B2304000BF934 /* BasicSans-Bold.otf */; };
+		A88E6EB41E9B2304000BF934 /* BasicSans-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAB1E9B2304000BF934 /* BasicSans-ExtraLight.otf */; };
+		A88E6EB51E9B2304000BF934 /* BasicSans-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAB1E9B2304000BF934 /* BasicSans-ExtraLight.otf */; };
+		A88E6EB61E9B2304000BF934 /* BasicSans-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAB1E9B2304000BF934 /* BasicSans-ExtraLight.otf */; };
+		A88E6EB71E9B2304000BF934 /* BasicSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAC1E9B2304000BF934 /* BasicSans-Light.otf */; };
+		A88E6EB81E9B2304000BF934 /* BasicSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAC1E9B2304000BF934 /* BasicSans-Light.otf */; };
+		A88E6EB91E9B2304000BF934 /* BasicSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAC1E9B2304000BF934 /* BasicSans-Light.otf */; };
+		A88E6EBA1E9B2304000BF934 /* BasicSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAD1E9B2304000BF934 /* BasicSans-Regular.otf */; };
+		A88E6EBB1E9B2304000BF934 /* BasicSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAD1E9B2304000BF934 /* BasicSans-Regular.otf */; };
+		A88E6EBC1E9B2304000BF934 /* BasicSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAD1E9B2304000BF934 /* BasicSans-Regular.otf */; };
+		A88E6EBD1E9B2304000BF934 /* BasicSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAE1E9B2304000BF934 /* BasicSans-SemiBold.otf */; };
+		A88E6EBE1E9B2304000BF934 /* BasicSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAE1E9B2304000BF934 /* BasicSans-SemiBold.otf */; };
+		A88E6EBF1E9B2304000BF934 /* BasicSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAE1E9B2304000BF934 /* BasicSans-SemiBold.otf */; };
+		A88E6EC01E9B2304000BF934 /* BasicSans-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAF1E9B2304000BF934 /* BasicSans-Thin.otf */; };
+		A88E6EC11E9B2304000BF934 /* BasicSans-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAF1E9B2304000BF934 /* BasicSans-Thin.otf */; };
+		A88E6EC21E9B2304000BF934 /* BasicSans-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAF1E9B2304000BF934 /* BasicSans-Thin.otf */; };
+		A88E6EC31E9B2304000BF934 /* BasicSans-ThinIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EB01E9B2304000BF934 /* BasicSans-ThinIt.otf */; };
+		A88E6EC41E9B2304000BF934 /* BasicSans-ThinIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EB01E9B2304000BF934 /* BasicSans-ThinIt.otf */; };
+		A88E6EC51E9B2304000BF934 /* BasicSans-ThinIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EB01E9B2304000BF934 /* BasicSans-ThinIt.otf */; };
+		A88E6EC71E9B2E01000BF934 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88E6EC61E9B2E01000BF934 /* Fonts.swift */; };
 		A8DB015A1E85970C00F5FCD8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DB01581E85970C00F5FCD8 /* MainTabBarController.swift */; };
 		A8DB01741E85A11C00F5FCD8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DB01721E85A11C00F5FCD8 /* Colors.swift */; };
 		A8DB01751E85A11C00F5FCD8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DB01731E85A11C00F5FCD8 /* Constants.swift */; };
@@ -101,11 +130,26 @@
 		A828FB6B1E90AB8C0065AC0C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A828FB6C1E90AB8C0065AC0C /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		A828FB701E92BC480065AC0C /* UITools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITools.swift; sourceTree = "<group>"; };
+		A84DCEE41E96F4580097BD69 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artist.swift; path = models/Artist.swift; sourceTree = "<group>"; };
+		A84DCEE61E96F6080097BD69 /* Resume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resume.swift; path = models/Resume.swift; sourceTree = "<group>"; };
+		A84DCEE91E96F7AB0097BD69 /* FakeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
+		A84DCEEB1E96FA220097BD69 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = models/Location.swift; sourceTree = "<group>"; };
+		A84DCEED1E96FF490097BD69 /* ArtistRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistRank.swift; sourceTree = "<group>"; };
 		A866DE231E8210460090E0A6 /* SYJStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SYJStateMachine.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A866DE271E8227690090E0A6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = models/User.swift; sourceTree = "<group>"; };
 		A866DE2A1E82329C0090E0A6 /* SYJViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYJViewControllers.swift; sourceTree = "<group>"; };
 		A866DE381E82FBA10090E0A6 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		A866DE391E82FBA10090E0A6 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		A88E6EA51E99E6AA000BF934 /* NibDesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibDesignableView.swift; sourceTree = "<group>"; };
+		A88E6EA71E99EEF3000BF934 /* ArtistCardView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistCardView2.swift; sourceTree = "<group>"; };
+		A88E6EAA1E9B2304000BF934 /* BasicSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasicSans-Bold.otf"; sourceTree = "<group>"; };
+		A88E6EAB1E9B2304000BF934 /* BasicSans-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasicSans-ExtraLight.otf"; sourceTree = "<group>"; };
+		A88E6EAC1E9B2304000BF934 /* BasicSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasicSans-Light.otf"; sourceTree = "<group>"; };
+		A88E6EAD1E9B2304000BF934 /* BasicSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasicSans-Regular.otf"; sourceTree = "<group>"; };
+		A88E6EAE1E9B2304000BF934 /* BasicSans-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasicSans-SemiBold.otf"; sourceTree = "<group>"; };
+		A88E6EAF1E9B2304000BF934 /* BasicSans-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasicSans-Thin.otf"; sourceTree = "<group>"; };
+		A88E6EB01E9B2304000BF934 /* BasicSans-ThinIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasicSans-ThinIt.otf"; sourceTree = "<group>"; };
+		A88E6EC61E9B2E01000BF934 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fonts.swift; path = constants/Fonts.swift; sourceTree = "<group>"; };
 		A8DB01581E85970C00F5FCD8 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		A8DB01721E85A11C00F5FCD8 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = constants/Colors.swift; sourceTree = "<group>"; };
 		A8DB01731E85A11C00F5FCD8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = constants/Constants.swift; sourceTree = "<group>"; };
@@ -188,6 +232,9 @@
 		A80E7E881E8044C3004DD656 /* fame */ = {
 			isa = PBXGroup;
 			children = (
+				A88E6EA91E9B22ED000BF934 /* resources */,
+				A84DCEF01E97E9EA0097BD69 /* animations */,
+				A84DCEE81E96F7A30097BD69 /* data */,
 				A866DE371E82F8360090E0A6 /* models */,
 				A866DE211E820FDB0090E0A6 /* modules */,
 				A80E7EBE1E804754004DD656 /* common */,
@@ -222,6 +269,7 @@
 			children = (
 				A8DB01931E885EDF00F5FCD8 /* TransparentNavigationBar.swift */,
 				A8FDAE301E8D899A003E09CD /* BaseViewController.swift */,
+				A88E6EA51E99E6AA000BF934 /* NibDesignableView.swift */,
 				A828FB541E8DEF970065AC0C /* UIKit+Extensions.swift */,
 				A8DB01711E85A0AB00F5FCD8 /* constants */,
 				A828FB681E8EC5590065AC0C /* delegates */,
@@ -254,6 +302,7 @@
 			children = (
 				A828FB4C1E8DEEDB0065AC0C /* DiscoverViewController.swift */,
 				A828FB4D1E8DEEDB0065AC0C /* DiscoverViewController.xib */,
+				A88E6EA71E99EEF3000BF934 /* ArtistCardView2.swift */,
 			);
 			path = discover;
 			sourceTree = "<group>";
@@ -272,6 +321,29 @@
 				A828FB701E92BC480065AC0C /* UITools.swift */,
 			);
 			path = utilities;
+			sourceTree = "<group>";
+		};
+		A84DCEE81E96F7A30097BD69 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				A84DCEE91E96F7AB0097BD69 /* FakeData.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		A84DCEEF1E97E9D50097BD69 /* koloda */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = koloda;
+			sourceTree = "<group>";
+		};
+		A84DCEF01E97E9EA0097BD69 /* animations */ = {
+			isa = PBXGroup;
+			children = (
+				A84DCEEF1E97E9D50097BD69 /* koloda */,
+			);
+			path = animations;
 			sourceTree = "<group>";
 		};
 		A866DE211E820FDB0090E0A6 /* modules */ = {
@@ -305,8 +377,26 @@
 			isa = PBXGroup;
 			children = (
 				A866DE271E8227690090E0A6 /* User.swift */,
+				A84DCEE41E96F4580097BD69 /* Artist.swift */,
+				A84DCEED1E96FF490097BD69 /* ArtistRank.swift */,
+				A84DCEE61E96F6080097BD69 /* Resume.swift */,
+				A84DCEEB1E96FA220097BD69 /* Location.swift */,
 			);
 			name = models;
+			sourceTree = "<group>";
+		};
+		A88E6EA91E9B22ED000BF934 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				A88E6EAA1E9B2304000BF934 /* BasicSans-Bold.otf */,
+				A88E6EAB1E9B2304000BF934 /* BasicSans-ExtraLight.otf */,
+				A88E6EAC1E9B2304000BF934 /* BasicSans-Light.otf */,
+				A88E6EAD1E9B2304000BF934 /* BasicSans-Regular.otf */,
+				A88E6EAE1E9B2304000BF934 /* BasicSans-SemiBold.otf */,
+				A88E6EAF1E9B2304000BF934 /* BasicSans-Thin.otf */,
+				A88E6EB01E9B2304000BF934 /* BasicSans-ThinIt.otf */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 		A8DB01711E85A0AB00F5FCD8 /* constants */ = {
@@ -315,6 +405,7 @@
 				A8DB01721E85A11C00F5FCD8 /* Colors.swift */,
 				A8DB01731E85A11C00F5FCD8 /* Constants.swift */,
 				A828FB641E8EC1A60065AC0C /* Enums.swift */,
+				A88E6EC61E9B2E01000BF934 /* Fonts.swift */,
 			);
 			name = constants;
 			sourceTree = "<group>";
@@ -493,16 +584,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A88E6EBD1E9B2304000BF934 /* BasicSans-SemiBold.otf in Resources */,
+				A88E6EB71E9B2304000BF934 /* BasicSans-Light.otf in Resources */,
+				A88E6EC01E9B2304000BF934 /* BasicSans-Thin.otf in Resources */,
 				A828FB6E1E90AB8C0065AC0C /* SignInViewController.xib in Resources */,
 				A828FB4B1E8DEEC90065AC0C /* RTFViewController.xib in Resources */,
 				A828FB4F1E8DEEDB0065AC0C /* DiscoverViewController.xib in Resources */,
 				A8DB017A1E85A14800F5FCD8 /* LaunchScreenViewController.xib in Resources */,
+				A88E6EB41E9B2304000BF934 /* BasicSans-ExtraLight.otf in Resources */,
 				A80E7E941E8044C3004DD656 /* Assets.xcassets in Resources */,
+				A88E6EB11E9B2304000BF934 /* BasicSans-Bold.otf in Resources */,
 				A80E7EBD1E804749004DD656 /* SYJRoleViewController.xib in Resources */,
+				A88E6EBA1E9B2304000BF934 /* BasicSans-Regular.otf in Resources */,
 				A828FB531E8DEEEA0065AC0C /* TrendingViewController.xib in Resources */,
 				A8FDAE351E8D8F26003E09CD /* ResumeViewController.xib in Resources */,
 				A866DE3B1E82FBA10090E0A6 /* AccountViewController.xib in Resources */,
 				A8DB01981E887EAC00F5FCD8 /* ShareViewController.xib in Resources */,
+				A88E6EC31E9B2304000BF934 /* BasicSans-ThinIt.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +608,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A88E6EB21E9B2304000BF934 /* BasicSans-Bold.otf in Resources */,
+				A88E6EB51E9B2304000BF934 /* BasicSans-ExtraLight.otf in Resources */,
+				A88E6EBB1E9B2304000BF934 /* BasicSans-Regular.otf in Resources */,
+				A88E6EC41E9B2304000BF934 /* BasicSans-ThinIt.otf in Resources */,
+				A88E6EBE1E9B2304000BF934 /* BasicSans-SemiBold.otf in Resources */,
+				A88E6EC11E9B2304000BF934 /* BasicSans-Thin.otf in Resources */,
+				A88E6EB81E9B2304000BF934 /* BasicSans-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +622,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A88E6EB31E9B2304000BF934 /* BasicSans-Bold.otf in Resources */,
+				A88E6EB61E9B2304000BF934 /* BasicSans-ExtraLight.otf in Resources */,
+				A88E6EBC1E9B2304000BF934 /* BasicSans-Regular.otf in Resources */,
+				A88E6EC51E9B2304000BF934 /* BasicSans-ThinIt.otf in Resources */,
+				A88E6EBF1E9B2304000BF934 /* BasicSans-SemiBold.otf in Resources */,
+				A88E6EC21E9B2304000BF934 /* BasicSans-Thin.otf in Resources */,
+				A88E6EB91E9B2304000BF934 /* BasicSans-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,13 +783,18 @@
 				A8FDAE371E8DA291003E09CD /* DismissDelegate.swift in Sources */,
 				A828FB711E92BC480065AC0C /* UITools.swift in Sources */,
 				A828FB671E8EC2270065AC0C /* LabelProtocols.swift in Sources */,
+				A84DCEE51E96F4580097BD69 /* Artist.swift in Sources */,
 				A8DB01971E887EAC00F5FCD8 /* ShareViewController.swift in Sources */,
 				A8DB015A1E85970C00F5FCD8 /* MainTabBarController.swift in Sources */,
+				A88E6EA61E99E6AA000BF934 /* NibDesignableView.swift in Sources */,
 				A80E7E921E8044C3004DD656 /* fame.xcdatamodeld in Sources */,
 				A828FB521E8DEEEA0065AC0C /* TrendingViewController.swift in Sources */,
 				A80E7E8A1E8044C3004DD656 /* AppDelegate.swift in Sources */,
 				A8DB01941E885EDF00F5FCD8 /* TransparentNavigationBar.swift in Sources */,
+				A88E6EA81E99EEF3000BF934 /* ArtistCardView2.swift in Sources */,
+				A88E6EC71E9B2E01000BF934 /* Fonts.swift in Sources */,
 				A828FB4E1E8DEEDB0065AC0C /* DiscoverViewController.swift in Sources */,
+				A84DCEEE1E96FF490097BD69 /* ArtistRank.swift in Sources */,
 				A828FB6A1E90A6D70065AC0C /* ViewProtocols.swift in Sources */,
 				A8DB01751E85A11C00F5FCD8 /* Constants.swift in Sources */,
 				A866DE241E8210460090E0A6 /* SYJStateMachine.swift in Sources */,
@@ -688,9 +805,12 @@
 				A8FDAE311E8D899A003E09CD /* BaseViewController.swift in Sources */,
 				A80E7EBC1E804749004DD656 /* SYJRoleViewController.swift in Sources */,
 				A866DE281E8227690090E0A6 /* User.swift in Sources */,
+				A84DCEEA1E96F7AB0097BD69 /* FakeData.swift in Sources */,
 				A8FDAE341E8D8F26003E09CD /* ResumeViewController.swift in Sources */,
 				A828FB611E8EB6F50065AC0C /* StatusBarProtocols.swift in Sources */,
 				A828FB651E8EC1A60065AC0C /* Enums.swift in Sources */,
+				A84DCEEC1E96FA220097BD69 /* Location.swift in Sources */,
+				A84DCEE71E96F6080097BD69 /* Resume.swift in Sources */,
 				A828FB4A1E8DEEC90065AC0C /* RTFViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

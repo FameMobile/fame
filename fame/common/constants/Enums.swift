@@ -13,6 +13,12 @@ public enum Role: String {
     case fan = "Fan"
 }
 
+public enum Profession: String {
+    case singer = "Singer"
+    case designer = "Designer"
+    case dancer = "Dancer"
+}
+
 enum Tag: Int {
     case statusBarBackground = 10
 }

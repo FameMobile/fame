@@ -11,38 +11,84 @@ import Koloda
 
 class DiscoverViewController: BaseViewController {
     
-    @IBOutlet weak var artistCard: KolodaView!
-    @IBOutlet weak var artistHeader: UIView!
-    @IBOutlet weak var stageNameLabel: UILabel!
-    @IBOutlet weak var nameLocationSeparator: UIView!
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var artistImage: UIImageView!
-    @IBOutlet weak var replayButton: UIImageView!
-    @IBOutlet weak var moreButton: UIButton!
+    @IBOutlet weak var artistDeckView: KolodaView!
     
-    @IBOutlet weak var voteFooter: UIView!
+    @IBOutlet weak var voteFooterView: UIView!
     @IBOutlet weak var rejectButton: UIButton!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var top20Button: UIButton!
     
+    var artists: [Artist] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.moreButton.tintColor = Color.golden.uiColor
-        
-        self.nameLocationSeparator.backgroundColor = UIView.defaultBorderColor.uiColor
         
         self.rejectButton.style()
         self.likeButton.style()
         self.top20Button.style()
+        
+        self.populateArtists()
+        
+        self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
+        
+        self.setupKolodaView()
     }
     
-    fileprivate func styleSeparator() {
-        guard let separator = self.nameLocationSeparator else {
-            return
-        }
-        separator.backgroundColor = UIView.defaultBorderColor.uiColor
-        separator.frame.size = CGSize(width: self.view.frame.width * 0.75, height: UIView.defaultBorderThickness)
+    func populateArtists() {
+        self.artists = FakeData.artists
+    }
+    
+    @IBAction func reject(_ sender: UIButton) {
+        self.artistDeckView.swipe(.left)
+    }
+    @IBAction func like(_ sender: UIButton) {
+        self.artistDeckView.swipe(.right)
+    }
+    @IBAction func top20(_ sender: UIButton) {
+        self.artistDeckView.swipe(.up)
+    }
+}
+
+private let frameAnimationSpringBounciness: CGFloat = 9
+private let frameAnimationSpringSpeed: CGFloat = 16
+private let kolodaCountOfVisibleCards = 2
+private let kolodaAlphaValueSemiTransparent: CGFloat = 0.1
+
+// MARK - Setup Koloda
+extension DiscoverViewController {
+    func setupKolodaView() {
+        self.artistDeckView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
+        self.artistDeckView.countOfVisibleCards = kolodaCountOfVisibleCards
+        self.artistDeckView.delegate = self
+        self.artistDeckView.dataSource = self
+        //self.artistStackView.animator = BackgroundKolodaAnimator(koloda: kolodaView)
+    }
+}
+
+// MARK - KolodaViewDelegate
+extension DiscoverViewController: KolodaViewDelegate {
+    func koloda(_ koloda: KolodaView, allowedDirectionsForIndex index: Int) -> [SwipeResultDirection] {
+        return [.left, .up, .right]
+    }
+    
+    func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
+        self.artistDeckView.resetCurrentCardIndex()
+    }    
+}
+
+// MARK - KolodaViewDataSource
+extension DiscoverViewController: KolodaViewDataSource {
+    func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
+        return self.artists.count
+    }
+    
+    func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         
+        return ArtistCardView(artist: self.artists[index])
+    }
+    
+    func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
+        return nil//Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)?[0] as? OverlayView
     }
 }
 
@@ -66,6 +112,7 @@ fileprivate extension UIButton {
         //self.imageEdgeInsets = UIEdgeInsetsMake(15, 15, 15, 15)
         self.backgroundColor = Color.purpleLight.uiColor
         self.tintColor = Color.golden.uiColor
+        self.contentMode = .center
         self.makeCircular()
     }
 }
