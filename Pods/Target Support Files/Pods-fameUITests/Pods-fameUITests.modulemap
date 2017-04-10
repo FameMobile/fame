@@ -1,6 +1,0 @@
-framework module Pods_fameUITests {
-  umbrella header "Pods-fameUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
