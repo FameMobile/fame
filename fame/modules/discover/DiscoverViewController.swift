@@ -78,6 +78,10 @@ extension DiscoverViewController: KolodaViewDelegate {
 
 // MARK - KolodaViewDataSource
 extension DiscoverViewController: KolodaViewDataSource {
+    func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
+        return .moderate
+    }
+
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
         return self.artists.count
     }

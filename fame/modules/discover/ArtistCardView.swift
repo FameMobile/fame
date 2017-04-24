@@ -137,11 +137,18 @@ extension ArtistCardView {
     
     fileprivate func layoutCoverImageView() {
         let view = self.coverImageView
-        view.contentMode = .scaleAspectFit
+        view.contentMode = .scaleAspectFill
+        //view.clipsToBounds = true
+        view.clipsToBounds = true
         view.autoPinEdge(toSuperviewEdge: .leading, withInset: 10)
         view.autoPinEdge(toSuperviewEdge: .trailing, withInset: 10)
         view.autoPinEdge(.top, to: .bottom, of: self.headerView, withOffset: 10)
-        view.autoConstrainAttribute(.height, to: .width, of: view, withOffset: 0, relation: .lessThanOrEqual)
+        view.autoConstrainAttribute(.height, to: .width, of: view, withOffset: 0, relation: .greaterThanOrEqual)
+        if let superview = view.superview {
+            view.autoConstrainAttribute(.bottom, to: .bottom, of: superview, withOffset: 10, relation: .lessThanOrEqual)
+        }
+        view.layer.borderColor = Color.white.cgColor
+        view.layer.borderWidth = 2.0
     }
     
     fileprivate func layoutMoreDetailButton() {

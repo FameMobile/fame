@@ -20,6 +20,16 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BasicSans-Bold.otf</string>
+		<string>BasicSans-ExtraLight.otf</string>
+		<string>BasicSans-Light.otf</string>
+		<string>BasicSans-Regular.otf</string>
+		<string>BasicSans-SemiBold.otf</string>
+		<string>BasicSans-Thin.otf</string>
+		<string>BasicSans-ThinIt.otf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreenViewController</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -41,15 +51,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>BasicSans-Bold.otf</string>
-		<string>BasicSans-ExtraLight.otf</string>
-		<string>BasicSans-Light.otf</string>
-		<string>BasicSans-Regular.otf</string>
-		<string>BasicSans-SemiBold.otf</string>
-		<string>BasicSans-Thin.otf</string>
-		<string>BasicSans-ThinIt.otf</string>
-	</array>
 </dict>
 </plist>

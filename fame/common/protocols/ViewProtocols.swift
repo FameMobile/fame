@@ -29,7 +29,6 @@ extension Hideable where Self: UIView {
 protocol Colorful {
     static func border(color: Color, thickness: CGFloat) -> UIView
     static func color(_ color: Color, x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) -> UIView
-    var uiImage: UIImage? { get }
 }
 
 extension Colorful where Self: UIView {
@@ -47,27 +46,7 @@ extension Colorful where Self: UIView {
         view.backgroundColor = color.uiColor
         view.alpha = 1
         return view
-    }
-    
-    var uiImage: UIImage? {
-        UIGraphicsBeginImageContextWithOptions(self.frame.size, self.isOpaque, UIScreen.main.scale)
-        if let currentContext = UIGraphicsGetCurrentContext() {
-            currentContext.setAlpha(self.alpha)
-            self.layer.render(in: currentContext)
-            
-            if let bgColor = self.backgroundColor?.cgColor {
-                currentContext.setFillColor(bgColor)
-            }
-            
-            let image = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-            
-            if let cgImage = image?.cgImage {
-                return UIImage(cgImage: cgImage)
-            }
-        }
-        return nil
-    }
+    }        
 }
 
 // MARK - Circular

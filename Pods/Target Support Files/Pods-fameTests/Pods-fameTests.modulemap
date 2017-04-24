@@ -1,0 +1,6 @@
+framework module Pods_fameTests {
+  umbrella header "Pods-fameTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

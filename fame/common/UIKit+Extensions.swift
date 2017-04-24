@@ -8,6 +8,11 @@
 
 import UIKit
 
+extension UIImage: Alpha, Resize, Round {}
+extension UILabel: DefaultLabel {}
+extension UINavigationController: StatusBarBackground {}
+extension UITabBar: Separators {}
+
 extension Bundle {
     static func loadView<T: UIView>(fromNib name: String, withType type: T.Type) -> T {
         if let view = Bundle.main.loadNibNamed(name, owner: nil, options: nil)?.first as? T {
@@ -18,7 +23,7 @@ extension Bundle {
     }
 }
 
-extension UIViewController {    
+extension UIViewController {
     func add(childViewController: UIViewController) {
         self.edgesForExtendedLayout = []
         self.addChildViewController(childViewController)
@@ -29,13 +34,30 @@ extension UIViewController {
     }
 }
 
-extension UILabel: DefaultLabel {}
-extension UINavigationController: StatusBarBackground {}
-extension UITabBar: Separators {}
 extension UIView: Circular, Colorful, Hideable {
     func addSubviews(_ views: [UIView]) {
         for view in views {
             self.addSubview(view)
         }
+    }
+    
+    var uiImage: UIImage? {
+        UIGraphicsBeginImageContextWithOptions(self.frame.size, self.isOpaque, UIScreen.main.scale)
+        if let currentContext = UIGraphicsGetCurrentContext() {
+            currentContext.setAlpha(self.alpha)
+            self.layer.render(in: currentContext)
+            
+            if let bgColor = self.backgroundColor?.cgColor {
+                currentContext.setFillColor(bgColor)
+            }
+            
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            if let cgImage = image?.cgImage {
+                return UIImage(cgImage: cgImage)
+            }
+        }
+        return nil
     }
 }
