@@ -22,6 +22,7 @@ class ArtistCardView: UIView {
     var professionLocationLabel: UILabel = UILabel.newAutoLayout()
     
     var coverImageView: UIImageView = UIImageView.newAutoLayout()
+    var playButton: UIButton = UIButton.newAutoLayout()
     
     var replayButton: UIButton = UIButton.newAutoLayout()
     var moreDetailButton: UIButton = UIButton.newAutoLayout()
@@ -53,6 +54,7 @@ extension ArtistCardView {
         self.addSubviews([
             self.headerView,
             self.coverImageView,
+            self.playButton,
             self.replayButton,
             self.moreDetailButton])
     }
@@ -77,6 +79,7 @@ extension ArtistCardView {
         
         layoutHeaderView()
         layoutCoverImageView()
+        layoutPlayButton()
         layoutMoreDetailButton()
         layoutReplayButton()
     }
@@ -156,6 +159,15 @@ extension ArtistCardView {
         view.image = image?.resized(contentMode: .scaleAspectFill, bounds: view.layer.bounds.size, interpolationQuality: .high)
         view.layer.borderColor = Color.white.cgColor
         view.layer.borderWidth = 2.0
+    }
+    
+    fileprivate func layoutPlayButton() {
+        let button = self.playButton
+        button.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+        button.autoPinEdge(toSuperviewEdge: .leading, withInset: 10)
+        button.autoAlignAxis(.horizontal, toSameAxisOf: self.coverImageView)
+        button.autoAlignAxis(.vertical, toSameAxisOf: self.coverImageView)
+        self.bringSubview(toFront: button)
     }
     
     fileprivate func layoutMoreDetailButton() {
