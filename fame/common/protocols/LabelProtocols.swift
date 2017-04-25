@@ -14,7 +14,7 @@ protocol DefaultLabel {
 
 extension DefaultLabel where Self: UILabel {
     private static var defaultFont: UIFont {
-        return BasicSans.regular.font(ofSize: 15.0)
+        return WorkSans.regular.font(ofSize: 15.0)
     }
     
     init(title: String, font: UIFont = Self.defaultFont, color: UIColor = Color.golden.uiColor) {

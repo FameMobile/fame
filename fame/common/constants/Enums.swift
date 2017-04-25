@@ -17,6 +17,8 @@ public enum Profession: String {
     case singer = "Singer"
     case designer = "Designer"
     case dancer = "Dancer"
+    case comedian = "Comedian"
+    case musician = "Musician"
 }
 
 enum Tag: Int {

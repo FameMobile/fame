@@ -105,7 +105,7 @@ extension DiscoverViewController {
 extension DiscoverViewController: Tab {
     var defaultTabBarItem: UITabBarItem? {
         get {
-            return UITabBarItem(title: nil, image: #imageLiteral(resourceName: "resume"), tag: 1)
+            return UITabBarItem(title: nil, image: #imageLiteral(resourceName: "discover"), tag: 1)
         }
     }
 }

@@ -92,8 +92,10 @@ extension ArtistCardView {
     }
     
     fileprivate func layoutStageNameView() {
-        self.stageNameView.autoAlignAxis(toSuperviewAxis: .vertical)
-        self.stageNameView.autoPinEdge(toSuperviewEdge: .top)
+        let view = self.stageNameView
+        view.autoAlignAxis(toSuperviewAxis: .vertical)
+        view.autoPinEdge(toSuperviewEdge: .top)
+        view.autoSetDimension(.height, toSize: 28)
         
         layoutResumeImageView()
         layoutStageNameLabel()
@@ -110,7 +112,7 @@ extension ArtistCardView {
     
     fileprivate func layoutStageNameLabel() {
         let label = self.stageNameLabel
-        label.font = BasicSans.regular.font(ofSize: 23)
+        label.font = WorkSans.regular.font(ofSize: 23)
         label.textColor = Color.white.uiColor
         label.autoPinEdge(.leading, to: .trailing, of: self.resumeImageView, withOffset: 10)
         label.autoPinEdge(toSuperviewEdge: .top)
@@ -128,32 +130,37 @@ extension ArtistCardView {
     
     fileprivate func layoutProfessionLocationLabel() {
         let label = self.professionLocationLabel
-        label.font = BasicSans.regular.font(ofSize: 13)
+        label.font = WorkSans.regular.font(ofSize: 13)
         label.textColor = Color.white.uiColor
         label.autoAlignAxis(toSuperviewAxis: .vertical)
         label.autoPinEdge(.top, to: .bottom, of: self.headerSeparator, withOffset: 5)
         label.autoPinEdge(toSuperviewEdge: .bottom)
+        label.autoSetDimension(.height, toSize: 18)
     }
     
     fileprivate func layoutCoverImageView() {
+        // Copy the original image format before autolayout adjustments
+        // This original image will be resized later with a manually chosen Interpolation Quality
+        let image = self.coverImageView.image?.copy() as? UIImage
         let view = self.coverImageView
-        view.contentMode = .scaleAspectFill
-        //view.clipsToBounds = true
+        //view.contentMode = .scaleAspectFill
         view.clipsToBounds = true
         view.autoPinEdge(toSuperviewEdge: .leading, withInset: 10)
         view.autoPinEdge(toSuperviewEdge: .trailing, withInset: 10)
         view.autoPinEdge(.top, to: .bottom, of: self.headerView, withOffset: 10)
-        view.autoConstrainAttribute(.height, to: .width, of: view, withOffset: 0, relation: .greaterThanOrEqual)
+        view.autoPinEdge(toSuperviewEdge: .bottom, withInset: 10)
+        /*view.autoConstrainAttribute(.height, to: .width, of: view, withOffset: 0, relation: .greaterThanOrEqual)
         if let superview = view.superview {
             view.autoConstrainAttribute(.bottom, to: .bottom, of: superview, withOffset: 10, relation: .lessThanOrEqual)
-        }
+        }*/
+        view.image = image?.resized(contentMode: .scaleAspectFill, bounds: view.layer.bounds.size, interpolationQuality: .high)
         view.layer.borderColor = Color.white.cgColor
         view.layer.borderWidth = 2.0
     }
     
     fileprivate func layoutMoreDetailButton() {
         let button = self.moreDetailButton
-        button.titleLabel?.font = BasicSans.regular.font(ofSize: 15)
+        button.titleLabel?.font = WorkSans.regular.font(ofSize: 15)
         button.setTitleColor(Color.golden.uiColor, for: .normal)
         button.autoAlignAxis(toSuperviewAxis: .vertical)
         button.autoPinEdge(.top, to: .bottom, of: self.coverImageView, withOffset: 10)

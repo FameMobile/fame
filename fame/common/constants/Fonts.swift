@@ -25,3 +25,24 @@ enum BasicSans: String {
         return UIFont(name: self.name, size: size) ?? UIFont.systemFont(ofSize: size)
     }
 }
+
+enum WorkSans: String {
+    case black = "Black"
+    case bold = "Bold"
+    case extraBold = "ExtraBold"
+    case extraLight = "ExtraLight"
+    case hairline = "Hairline"
+    case light = "Light"
+    case medium = "Medium"
+    case regular = "Regular"
+    case semiBold = "SemiBold"
+    case thin = "Thin"
+    
+    var name: String {
+        return "WorkSans-\(self.rawValue)"
+    }
+    
+    func font(ofSize size: CGFloat) -> UIFont {
+        return UIFont(name: self.name, size: size) ?? UIFont.systemFont(ofSize: size)
+    }
+}

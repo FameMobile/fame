@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         UIApplication.shared.statusBarStyle = .lightContent
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: BasicSans.regular.font(ofSize: 13.0)], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: WorkSans.regular.font(ofSize: 13.0)], for: .normal)
         
         let rootNavigationController = UINavigationController(navigationBarClass: TransparentNavigationBar.self, toolbarClass: nil, hideStatusBarBackground: false)
         

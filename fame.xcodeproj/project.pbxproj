@@ -46,6 +46,17 @@
 		A866DE2B1E82329C0090E0A6 /* SYJViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866DE2A1E82329C0090E0A6 /* SYJViewControllers.swift */; };
 		A866DE3A1E82FBA10090E0A6 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866DE381E82FBA10090E0A6 /* AccountViewController.swift */; };
 		A866DE3B1E82FBA10090E0A6 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A866DE391E82FBA10090E0A6 /* AccountViewController.xib */; };
+		A8817AE41EAEFB55006A74F9 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = A8817AD91EAEFB55006A74F9 /* SIL Open Font License.txt */; };
+		A8817AE51EAEFB55006A74F9 /* WorkSans-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8817ADA1EAEFB55006A74F9 /* WorkSans-Black.otf */; };
+		A8817AE61EAEFB55006A74F9 /* WorkSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8817ADB1EAEFB55006A74F9 /* WorkSans-Bold.otf */; };
+		A8817AE71EAEFB55006A74F9 /* WorkSans-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8817ADC1EAEFB55006A74F9 /* WorkSans-ExtraBold.otf */; };
+		A8817AE81EAEFB55006A74F9 /* WorkSans-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8817ADD1EAEFB55006A74F9 /* WorkSans-ExtraLight.otf */; };
+		A8817AE91EAEFB55006A74F9 /* WorkSans-Hairline.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8817ADE1EAEFB55006A74F9 /* WorkSans-Hairline.otf */; };
+		A8817AEA1EAEFB55006A74F9 /* WorkSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8817ADF1EAEFB55006A74F9 /* WorkSans-Light.otf */; };
+		A8817AEB1EAEFB55006A74F9 /* WorkSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8817AE01EAEFB55006A74F9 /* WorkSans-Medium.otf */; };
+		A8817AEC1EAEFB55006A74F9 /* WorkSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8817AE11EAEFB55006A74F9 /* WorkSans-Regular.otf */; };
+		A8817AED1EAEFB55006A74F9 /* WorkSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8817AE21EAEFB55006A74F9 /* WorkSans-SemiBold.otf */; };
+		A8817AEE1EAEFB55006A74F9 /* WorkSans-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8817AE31EAEFB55006A74F9 /* WorkSans-Thin.otf */; };
 		A88E6EA61E99E6AA000BF934 /* NibDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88E6EA51E99E6AA000BF934 /* NibDesignableView.swift */; };
 		A88E6EA81E99EEF3000BF934 /* ArtistCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88E6EA71E99EEF3000BF934 /* ArtistCardView.swift */; };
 		A88E6EB11E9B2304000BF934 /* BasicSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAA1E9B2304000BF934 /* BasicSans-Bold.otf */; };
@@ -149,6 +160,17 @@
 		A866DE2A1E82329C0090E0A6 /* SYJViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYJViewControllers.swift; sourceTree = "<group>"; };
 		A866DE381E82FBA10090E0A6 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		A866DE391E82FBA10090E0A6 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		A8817AD91EAEFB55006A74F9 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		A8817ADA1EAEFB55006A74F9 /* WorkSans-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Black.otf"; sourceTree = "<group>"; };
+		A8817ADB1EAEFB55006A74F9 /* WorkSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.otf"; sourceTree = "<group>"; };
+		A8817ADC1EAEFB55006A74F9 /* WorkSans-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-ExtraBold.otf"; sourceTree = "<group>"; };
+		A8817ADD1EAEFB55006A74F9 /* WorkSans-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-ExtraLight.otf"; sourceTree = "<group>"; };
+		A8817ADE1EAEFB55006A74F9 /* WorkSans-Hairline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Hairline.otf"; sourceTree = "<group>"; };
+		A8817ADF1EAEFB55006A74F9 /* WorkSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Light.otf"; sourceTree = "<group>"; };
+		A8817AE01EAEFB55006A74F9 /* WorkSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Medium.otf"; sourceTree = "<group>"; };
+		A8817AE11EAEFB55006A74F9 /* WorkSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.otf"; sourceTree = "<group>"; };
+		A8817AE21EAEFB55006A74F9 /* WorkSans-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-SemiBold.otf"; sourceTree = "<group>"; };
+		A8817AE31EAEFB55006A74F9 /* WorkSans-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Thin.otf"; sourceTree = "<group>"; };
 		A88E6EA51E99E6AA000BF934 /* NibDesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibDesignableView.swift; sourceTree = "<group>"; };
 		A88E6EA71E99EEF3000BF934 /* ArtistCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistCardView.swift; sourceTree = "<group>"; };
 		A88E6EAA1E9B2304000BF934 /* BasicSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasicSans-Bold.otf"; sourceTree = "<group>"; };
@@ -411,6 +433,17 @@
 		A88E6EA91E9B22ED000BF934 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				A8817AD91EAEFB55006A74F9 /* SIL Open Font License.txt */,
+				A8817ADA1EAEFB55006A74F9 /* WorkSans-Black.otf */,
+				A8817ADB1EAEFB55006A74F9 /* WorkSans-Bold.otf */,
+				A8817ADC1EAEFB55006A74F9 /* WorkSans-ExtraBold.otf */,
+				A8817ADD1EAEFB55006A74F9 /* WorkSans-ExtraLight.otf */,
+				A8817ADE1EAEFB55006A74F9 /* WorkSans-Hairline.otf */,
+				A8817ADF1EAEFB55006A74F9 /* WorkSans-Light.otf */,
+				A8817AE01EAEFB55006A74F9 /* WorkSans-Medium.otf */,
+				A8817AE11EAEFB55006A74F9 /* WorkSans-Regular.otf */,
+				A8817AE21EAEFB55006A74F9 /* WorkSans-SemiBold.otf */,
+				A8817AE31EAEFB55006A74F9 /* WorkSans-Thin.otf */,
 				A88E6EAA1E9B2304000BF934 /* BasicSans-Bold.otf */,
 				A88E6EAB1E9B2304000BF934 /* BasicSans-ExtraLight.otf */,
 				A88E6EAC1E9B2304000BF934 /* BasicSans-Light.otf */,
@@ -612,19 +645,30 @@
 				A88E6EBD1E9B2304000BF934 /* BasicSans-SemiBold.otf in Resources */,
 				A88E6EB71E9B2304000BF934 /* BasicSans-Light.otf in Resources */,
 				A88E6EC01E9B2304000BF934 /* BasicSans-Thin.otf in Resources */,
+				A8817AE41EAEFB55006A74F9 /* SIL Open Font License.txt in Resources */,
+				A8817AE91EAEFB55006A74F9 /* WorkSans-Hairline.otf in Resources */,
 				A828FB6E1E90AB8C0065AC0C /* SignInViewController.xib in Resources */,
+				A8817AED1EAEFB55006A74F9 /* WorkSans-SemiBold.otf in Resources */,
+				A8817AEA1EAEFB55006A74F9 /* WorkSans-Light.otf in Resources */,
 				A828FB4B1E8DEEC90065AC0C /* RTFViewController.xib in Resources */,
+				A8817AEC1EAEFB55006A74F9 /* WorkSans-Regular.otf in Resources */,
 				A828FB4F1E8DEEDB0065AC0C /* DiscoverViewController.xib in Resources */,
 				A8DB017A1E85A14800F5FCD8 /* LaunchScreenViewController.xib in Resources */,
 				A88E6EB41E9B2304000BF934 /* BasicSans-ExtraLight.otf in Resources */,
+				A8817AE51EAEFB55006A74F9 /* WorkSans-Black.otf in Resources */,
 				A80E7E941E8044C3004DD656 /* Assets.xcassets in Resources */,
+				A8817AE81EAEFB55006A74F9 /* WorkSans-ExtraLight.otf in Resources */,
+				A8817AEE1EAEFB55006A74F9 /* WorkSans-Thin.otf in Resources */,
 				A88E6EB11E9B2304000BF934 /* BasicSans-Bold.otf in Resources */,
+				A8817AE71EAEFB55006A74F9 /* WorkSans-ExtraBold.otf in Resources */,
 				A80E7EBD1E804749004DD656 /* SYJRoleViewController.xib in Resources */,
 				A88E6EBA1E9B2304000BF934 /* BasicSans-Regular.otf in Resources */,
+				A8817AE61EAEFB55006A74F9 /* WorkSans-Bold.otf in Resources */,
 				A828FB531E8DEEEA0065AC0C /* TrendingViewController.xib in Resources */,
 				A8FDAE351E8D8F26003E09CD /* ResumeViewController.xib in Resources */,
 				A866DE3B1E82FBA10090E0A6 /* AccountViewController.xib in Resources */,
 				A8DB01981E887EAC00F5FCD8 /* ShareViewController.xib in Resources */,
+				A8817AEB1EAEFB55006A74F9 /* WorkSans-Medium.otf in Resources */,
 				A88E6EC31E9B2304000BF934 /* BasicSans-ThinIt.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
