@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 import PureLayout
+
+protocol VideoPlayerDelegate {
+    func display(videoViewController viewController: AVPlayerViewController)
+}
 
 class ArtistCardView: UIView {
     
     var artist: Artist?
+    var videoDelegate: VideoPlayerDelegate?
     
     var headerView: UIView = UIView.newClearAutoLayout()
     var stageNameView: UIView = UIView.newClearAutoLayout()
@@ -23,6 +30,8 @@ class ArtistCardView: UIView {
     
     var coverImageView: UIImageView = UIImageView.newAutoLayout()
     var playButton: UIButton = UIButton.newAutoLayout()
+    var playerViewController: AVPlayerViewController = AVPlayerViewController()
+    var playerLayer: AVPlayerLayer = AVPlayerLayer()
     
     var replayButton: UIButton = UIButton.newAutoLayout()
     var moreDetailButton: UIButton = UIButton.newAutoLayout()
@@ -74,7 +83,7 @@ extension ArtistCardView {
     
     fileprivate func layout() {
         self.backgroundColor = Color.purple.uiColor
-        self.clipsToBounds = true
+        //self.clipsToBounds = true
         //self.layoutIfNeeded()
         
         layoutHeaderView()
@@ -86,8 +95,8 @@ extension ArtistCardView {
     
     func layoutHeaderView() {
         self.headerView.autoPinEdge(toSuperviewEdge: .top, withInset: 10)
-        self.headerView.autoPinEdge(toSuperviewEdge: .leading, withInset: 10)
-        self.headerView.autoPinEdge(toSuperviewEdge: .trailing, withInset: 10)
+        self.headerView.autoPinEdge(toSuperviewEdge: .leading)
+        self.headerView.autoPinEdge(toSuperviewEdge: .trailing)
         
         layoutStageNameView()
         layoutHeaderSeparator()
@@ -148,14 +157,9 @@ extension ArtistCardView {
         let view = self.coverImageView
         //view.contentMode = .scaleAspectFill
         view.clipsToBounds = true
-        view.autoPinEdge(toSuperviewEdge: .leading, withInset: 10)
-        view.autoPinEdge(toSuperviewEdge: .trailing, withInset: 10)
+        view.autoPinEdge(toSuperviewEdge: .leading)
+        view.autoPinEdge(toSuperviewEdge: .trailing)
         view.autoPinEdge(.top, to: .bottom, of: self.headerView, withOffset: 10)
-        view.autoPinEdge(toSuperviewEdge: .bottom, withInset: 10)
-        /*view.autoConstrainAttribute(.height, to: .width, of: view, withOffset: 0, relation: .greaterThanOrEqual)
-        if let superview = view.superview {
-            view.autoConstrainAttribute(.bottom, to: .bottom, of: superview, withOffset: 10, relation: .lessThanOrEqual)
-        }*/
         view.image = image?.resized(contentMode: .scaleAspectFill, bounds: view.layer.bounds.size, interpolationQuality: .high)
         view.layer.borderColor = Color.white.cgColor
         view.layer.borderWidth = 2.0
@@ -167,22 +171,34 @@ extension ArtistCardView {
         button.autoPinEdge(toSuperviewEdge: .leading, withInset: 10)
         button.autoAlignAxis(.horizontal, toSameAxisOf: self.coverImageView)
         button.autoAlignAxis(.vertical, toSameAxisOf: self.coverImageView)
+        button.addTarget(self, action: #selector(self.playVideo), for: .touchUpInside)
         self.bringSubview(toFront: button)
     }
     
     fileprivate func layoutMoreDetailButton() {
         let button = self.moreDetailButton
-        button.titleLabel?.font = WorkSans.regular.font(ofSize: 15)
+        button.titleLabel?.font = WorkSans.semiBold.font(ofSize: 15)
         button.setTitleColor(Color.golden.uiColor, for: .normal)
         button.autoAlignAxis(toSuperviewAxis: .vertical)
         button.autoPinEdge(.top, to: .bottom, of: self.coverImageView, withOffset: 10)
+        button.autoPinEdge(toSuperviewEdge: .bottom, withInset: 10)
+        button.autoSetDimension(.height, toSize: 20)
     }
     
     fileprivate func layoutReplayButton() {
         let button = self.replayButton
         button.setImage(#imageLiteral(resourceName: "replay"), for: .normal)
-        button.autoPinEdge(toSuperviewEdge: .leading, withInset: 10)
+        button.autoPinEdge(toSuperviewEdge: .leading, withInset: -15)
         button.autoAlignAxis(.horizontal, toSameAxisOf: self.moreDetailButton)
+    }
+    
+    fileprivate func layoutVideoPlayer() {
+        self.playerViewController.videoGravity = AVLayerVideoGravityResizeAspectFill
+        
+        let layer = self.playerLayer
+        layer.bounds = self.coverImageView.bounds
+        layer.backgroundColor = Color.black.cgColor
+        layer.videoGravity = AVLayerVideoGravityResizeAspectFill
     }
 }
 
@@ -194,9 +210,30 @@ extension ArtistCardView {
         self.professionLocationLabel.text = self.resume.professionInLocation
         
         self.coverImageView.image = self.resume.headShot
+        populatePlayer()
         
         let moreDetailText = stageName.isEmpty ? "more detail" : "more from \(stageName)"
         self.moreDetailButton.setTitle(moreDetailText, for: .normal)
+    }
+    
+    fileprivate func populatePlayer() {
+        if let video = self.resume.introVideo {
+            let playerItem = AVPlayerItem(asset: video)
+            let player = AVPlayer(playerItem: playerItem)
+            
+            self.playerViewController.player = player
+            self.playerLayer.player = player
+        }
+    }
+}
+
+// MARK - Actions
+extension ArtistCardView {
+    func playVideo() {
+        //self.videoDelegate?.display(videoViewController: self.playerViewController)
+        //let layer = self.coverImageView.layer
+        self.layer.addSublayer(self.playerLayer)
+        self.playerLayer.player?.play()
     }
 }
 

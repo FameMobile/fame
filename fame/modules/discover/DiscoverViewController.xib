@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,17 +23,20 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_deck" translatesAutoresizingMaskIntoConstraints="NO" id="yW3-rC-FA7">
+                    <rect key="frame" x="10" y="83" width="394" height="504"/>
+                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KSW-Dh-Q6J" customClass="KolodaView" customModule="Koloda">
-                    <rect key="frame" x="15" y="0.0" width="290" height="473"/>
+                    <rect key="frame" x="26" y="0.0" width="362" height="641"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRi-K5-6GL">
-                    <rect key="frame" x="0.0" y="473" width="320" height="95"/>
+                    <rect key="frame" x="0.0" y="641" width="414" height="95"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6d-Vb-KYE">
-                            <rect key="frame" x="42.5" y="10" width="75" height="75"/>
+                            <rect key="frame" x="45.333333333333343" y="10" width="75" height="75"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" button="YES" image="YES"/>
                             </accessibility>
@@ -47,7 +50,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6R2-Us-8sq">
-                            <rect key="frame" x="122.5" y="10" width="75" height="75"/>
+                            <rect key="frame" x="169.66666666666666" y="10" width="75" height="75"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" button="YES" image="YES"/>
                             </accessibility>
@@ -57,7 +60,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4j-y6-6Pd">
-                            <rect key="frame" x="202.5" y="10" width="75" height="75"/>
+                            <rect key="frame" x="293.66666666666669" y="10" width="75" height="75"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" button="YES" image="YES"/>
                             </accessibility>
@@ -74,30 +77,35 @@
                         <constraint firstItem="6R2-Us-8sq" firstAttribute="width" secondItem="Z6d-Vb-KYE" secondAttribute="width" id="YCV-Nh-a1b"/>
                         <constraint firstAttribute="height" constant="95" id="aby-7S-tLa"/>
                         <constraint firstItem="Y4j-y6-6Pd" firstAttribute="height" secondItem="Z6d-Vb-KYE" secondAttribute="height" id="akC-qB-b40"/>
-                        <constraint firstAttribute="trailing" secondItem="Y4j-y6-6Pd" secondAttribute="centerX" multiplier="4:3" id="eJA-rn-zyW"/>
+                        <constraint firstAttribute="trailing" secondItem="Y4j-y6-6Pd" secondAttribute="centerX" multiplier="5:4" id="eJA-rn-zyW"/>
                         <constraint firstItem="6R2-Us-8sq" firstAttribute="centerY" secondItem="Z6d-Vb-KYE" secondAttribute="centerY" id="kEx-kC-00V"/>
                         <constraint firstItem="Y4j-y6-6Pd" firstAttribute="centerY" secondItem="Z6d-Vb-KYE" secondAttribute="centerY" id="nRP-QO-JL8"/>
                         <constraint firstItem="Y4j-y6-6Pd" firstAttribute="width" secondItem="Z6d-Vb-KYE" secondAttribute="width" id="u8M-iX-h6I"/>
-                        <constraint firstAttribute="trailing" secondItem="Z6d-Vb-KYE" secondAttribute="centerX" multiplier="4" id="xYq-W4-nKK"/>
+                        <constraint firstAttribute="trailing" secondItem="Z6d-Vb-KYE" secondAttribute="centerX" multiplier="5" id="xYq-W4-nKK"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="yW3-rC-FA7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="83" id="5nf-ij-2C5"/>
+                <constraint firstItem="MRi-K5-6GL" firstAttribute="top" secondItem="yW3-rC-FA7" secondAttribute="bottom" constant="54" id="As2-BG-QWY"/>
                 <constraint firstItem="MRi-K5-6GL" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="F9w-eN-zMO"/>
+                <constraint firstAttribute="trailing" secondItem="yW3-rC-FA7" secondAttribute="trailing" constant="10" id="N50-Qo-Ugd"/>
                 <constraint firstAttribute="bottom" secondItem="MRi-K5-6GL" secondAttribute="bottom" id="PLC-zX-Bhn"/>
                 <constraint firstItem="MRi-K5-6GL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PfY-uY-JhY"/>
                 <constraint firstItem="KSW-Dh-Q6J" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Xgs-iX-8mq"/>
-                <constraint firstItem="KSW-Dh-Q6J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="fc8-GF-XAk"/>
+                <constraint firstItem="KSW-Dh-Q6J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="fc8-GF-XAk"/>
                 <constraint firstItem="MRi-K5-6GL" firstAttribute="top" secondItem="KSW-Dh-Q6J" secondAttribute="bottom" id="hV5-9b-btH"/>
-                <constraint firstAttribute="trailing" secondItem="KSW-Dh-Q6J" secondAttribute="trailing" constant="15" id="scv-Jb-wyq"/>
+                <constraint firstItem="yW3-rC-FA7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="qYI-FU-o3k"/>
+                <constraint firstAttribute="trailing" secondItem="KSW-Dh-Q6J" secondAttribute="trailing" constant="26" id="scv-Jb-wyq"/>
             </constraints>
             <point key="canvasLocation" x="133.5" y="54.5"/>
         </view>
     </objects>
     <resources>
-        <image name="like" width="44" height="39"/>
+        <image name="card_deck" width="390" height="339"/>
+        <image name="like" width="44" height="38"/>
         <image name="reject" width="36" height="35"/>
-        <image name="top20" width="36" height="33"/>
+        <image name="top20" width="36" height="32"/>
     </resources>
 </document>

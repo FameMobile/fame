@@ -15,12 +15,12 @@ class MainTabBarController: UITabBarController {
         
         self.tabBar.barStyle = .black
         self.tabBar.isTranslucent = false
-        self.tabBar.unselectedItemTintColor = Color.grayDark.uiColor
-        self.tabBar.tintColor = Color.gray.uiColor
+        self.tabBar.unselectedItemTintColor = Color.gray.uiColor
+        self.tabBar.tintColor = Color.golden.uiColor
         
         self.viewControllers = self.createTabs()
         
-        self.tabBar.addDefaultSeparators()
+        self.tabBar.addSeparators(color: Color.gray)
         
         let logo = UIBarButtonItem(image: #imageLiteral(resourceName: "logo"), style: .plain, target: self, action: #selector(self.logout))
         logo.tintColor = Color.white.uiColor

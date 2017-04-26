@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 struct Resume {
     var headShot: UIImage?
@@ -17,7 +18,7 @@ struct Resume {
     var genre: String?
     var headline: String?
     
-    var introVideo: Any?
+    var introVideo: AVAsset?
     var portfolio: [Any]?
     
     var urls: [String]?

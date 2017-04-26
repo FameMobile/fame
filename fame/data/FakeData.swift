@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class FakeData {
     static let eliah = Artist(resume: Resume(
@@ -17,7 +18,7 @@ class FakeData {
         location: Location(city: "Atlanta", state: "GA"),
         genre: "Blues",
         headline: "Just trying to do my thing.",
-        introVideo: nil,
+        introVideo: AVAsset(url: URL(fileReferenceLiteralResourceName: "code_walk_through.mp4")),
         portfolio: nil,
         urls: nil)
     )

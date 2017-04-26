@@ -57,6 +57,7 @@
 		A8817AEC1EAEFB55006A74F9 /* WorkSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8817AE11EAEFB55006A74F9 /* WorkSans-Regular.otf */; };
 		A8817AED1EAEFB55006A74F9 /* WorkSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8817AE21EAEFB55006A74F9 /* WorkSans-SemiBold.otf */; };
 		A8817AEE1EAEFB55006A74F9 /* WorkSans-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8817AE31EAEFB55006A74F9 /* WorkSans-Thin.otf */; };
+		A8817AF01EAF7C42006A74F9 /* code_walk_through.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A8817AEF1EAF7C42006A74F9 /* code_walk_through.mp4 */; };
 		A88E6EA61E99E6AA000BF934 /* NibDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88E6EA51E99E6AA000BF934 /* NibDesignableView.swift */; };
 		A88E6EA81E99EEF3000BF934 /* ArtistCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88E6EA71E99EEF3000BF934 /* ArtistCardView.swift */; };
 		A88E6EB11E9B2304000BF934 /* BasicSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A88E6EAA1E9B2304000BF934 /* BasicSans-Bold.otf */; };
@@ -171,6 +172,7 @@
 		A8817AE11EAEFB55006A74F9 /* WorkSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.otf"; sourceTree = "<group>"; };
 		A8817AE21EAEFB55006A74F9 /* WorkSans-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-SemiBold.otf"; sourceTree = "<group>"; };
 		A8817AE31EAEFB55006A74F9 /* WorkSans-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Thin.otf"; sourceTree = "<group>"; };
+		A8817AEF1EAF7C42006A74F9 /* code_walk_through.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = code_walk_through.mp4; path = ../data/code_walk_through.mp4; sourceTree = "<group>"; };
 		A88E6EA51E99E6AA000BF934 /* NibDesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibDesignableView.swift; sourceTree = "<group>"; };
 		A88E6EA71E99EEF3000BF934 /* ArtistCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistCardView.swift; sourceTree = "<group>"; };
 		A88E6EAA1E9B2304000BF934 /* BasicSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasicSans-Bold.otf"; sourceTree = "<group>"; };
@@ -433,6 +435,7 @@
 		A88E6EA91E9B22ED000BF934 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				A8817AEF1EAF7C42006A74F9 /* code_walk_through.mp4 */,
 				A8817AD91EAEFB55006A74F9 /* SIL Open Font License.txt */,
 				A8817ADA1EAEFB55006A74F9 /* WorkSans-Black.otf */,
 				A8817ADB1EAEFB55006A74F9 /* WorkSans-Bold.otf */,
@@ -670,6 +673,7 @@
 				A8DB01981E887EAC00F5FCD8 /* ShareViewController.xib in Resources */,
 				A8817AEB1EAEFB55006A74F9 /* WorkSans-Medium.otf in Resources */,
 				A88E6EC31E9B2304000BF934 /* BasicSans-ThinIt.otf in Resources */,
+				A8817AF01EAF7C42006A74F9 /* code_walk_through.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

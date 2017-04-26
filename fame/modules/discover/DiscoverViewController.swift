@@ -8,6 +8,7 @@
 
 import UIKit
 import Koloda
+import AVKit
 
 class DiscoverViewController: BaseViewController {
     
@@ -87,8 +88,9 @@ extension DiscoverViewController: KolodaViewDataSource {
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        
-        return ArtistCardView(artist: self.artists[index])
+        let artistCard = ArtistCardView(artist: self.artists[index])
+        artistCard.videoDelegate = self
+        return artistCard
     }
     
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
@@ -107,6 +109,14 @@ extension DiscoverViewController: Tab {
         get {
             return UITabBarItem(title: nil, image: #imageLiteral(resourceName: "discover"), tag: 1)
         }
+    }
+}
+
+// MARK - VideoPlayerDelegate
+extension DiscoverViewController: VideoPlayerDelegate {
+    func display(videoViewController viewController: AVPlayerViewController) {
+        self.navigationController?.pushViewController(viewController, animated: true)
+        viewController.player?.play()
     }
 }
 

@@ -28,21 +28,17 @@ protocol Separators {
     func addSeparators(color: Color, width: CGFloat)
 }
 
-extension Separators where Self: UITabBar {
-    func addDefaultSeparators() {
-        addSeparators(color: Color.grayDark, width: StandardBorderThickness)
-    }
-    
-    func addSeparators(color: Color, width separatorWidth: CGFloat) {
+extension Separators where Self: UITabBar {    
+    func addSeparators(color: Color = Color.gray, width separatorWidth: CGFloat = StandardBorderThickness) {
         if let items = self.items {
             let itemWidth = floor(self.frame.size.width / CGFloat(items.count))
             let verticalInset = CGFloat(7.5)
             
             // iterate through the items in the Tab Bar, except the last one
-            for i in 0...(items.count - 1) {
+            for i in 1...(items.count - 1) {
                 // make a new separator at the end of each tab bar item
                 let separator = UIView.color(color,
-                                             x: itemWidth * CGFloat(i + 1) - separatorWidth,
+                                             x: itemWidth * CGFloat(i) - separatorWidth,
                                              y: verticalInset,
                                              width: separatorWidth,
                                              height: self.frame.size.height - (verticalInset * 2))
