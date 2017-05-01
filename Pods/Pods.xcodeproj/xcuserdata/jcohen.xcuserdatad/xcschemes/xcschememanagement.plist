@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MobilePlayer-MobilePlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MobilePlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-fame.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,11 +47,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>000CF0B62EFF2E043748FDDD740C2343</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>20151774CE2F5FA6B8126D4F5ED1C5FE</key>
 		<dict>
 			<key>primary</key>
@@ -52,7 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>84596896E9101CE4CF458D1CC7CBF2FE</key>
+		<key>362E95B816068454C1FA5DD3CA791372</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>98F0205FC8FC7B75E3F6769797D3E188</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -63,6 +73,16 @@
 			<true/>
 		</dict>
 		<key>9C20EE701D40AE7B17404E4B3E5BEC05</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AD666190D4145AC9FE643913F908B928</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B79BFAD90CD9FB8AD54828173BA32402</key>
 		<dict>
 			<key>primary</key>
 			<true/>

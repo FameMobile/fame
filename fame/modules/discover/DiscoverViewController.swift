@@ -8,7 +8,7 @@
 
 import UIKit
 import Koloda
-import AVKit
+import MobilePlayer
 
 class DiscoverViewController: BaseViewController {
     
@@ -18,6 +18,8 @@ class DiscoverViewController: BaseViewController {
     @IBOutlet weak var rejectButton: UIButton!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var top20Button: UIButton!
+    
+    var mobilePlayerViewController: MobilePlayerViewController?
     
     var artists: [Artist] = []
     
@@ -30,7 +32,7 @@ class DiscoverViewController: BaseViewController {
         
         self.populateArtists()
         
-        self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
+        self.modalTransitionStyle = .flipHorizontal
         
         self.setupKolodaView()
     }
@@ -40,13 +42,23 @@ class DiscoverViewController: BaseViewController {
     }
     
     @IBAction func reject(_ sender: UIButton) {
-        self.artistDeckView.swipe(.left)
+        self.simulateSwipe(.left)
     }
     @IBAction func like(_ sender: UIButton) {
-        self.artistDeckView.swipe(.right)
+        self.simulateSwipe(.right)
     }
     @IBAction func top20(_ sender: UIButton) {
-        self.artistDeckView.swipe(.up)
+        self.simulateSwipe(.up)
+    }
+    
+    func simulateSwipe(_ direction: SwipeResultDirection) {
+        if let playerVC = self.mobilePlayerViewController {
+            playerVC.dismiss(animated: true) {
+                self.artistDeckView.swipe(direction)
+            }
+        } else {
+            self.artistDeckView.swipe(direction)
+        }
     }
 }
 
@@ -112,11 +124,37 @@ extension DiscoverViewController: Tab {
     }
 }
 
+let videoPlayerSkinning: [String : Any] = [:]
+
 // MARK - VideoPlayerDelegate
 extension DiscoverViewController: VideoPlayerDelegate {
-    func display(videoViewController viewController: AVPlayerViewController) {
-        self.navigationController?.pushViewController(viewController, animated: true)
-        viewController.player?.play()
+    func display() {
+        let videoURL = URL(fileReferenceLiteralResourceName: "code_walk_through.mp4")
+        
+        let playerVC = VideoPlayerViewController(contentURL: videoURL)
+        playerVC.title = "ELIAH HUNT - Teaching Programming"
+        playerVC.activityItems = [videoURL]        
+        playerVC.modalTransitionStyle = .crossDissolve
+        playerVC.modalPresentationStyle = .popover
+        playerVC.modalPresentationCapturesStatusBarAppearance = false
+        if let popoverVC = playerVC.popoverPresentationController {
+            let coverImageView = (self.artistDeckView.viewForCard(at: self.artistDeckView.currentCardIndex) as? ArtistCardView)?.coverImageView
+            popoverVC.delegate = self
+            popoverVC.backgroundColor = Color.clear.uiColor
+            popoverVC.passthroughViews = [self.rejectButton, self.likeButton, self.top20Button]
+            popoverVC.permittedArrowDirections = []            
+            popoverVC.sourceView = coverImageView
+            popoverVC.sourceRect = coverImageView?.bounds ?? self.view.bounds
+        }
+        
+        self.present(playerVC, animated: true, completion: nil)
+        self.mobilePlayerViewController = playerVC
+    }
+}
+
+extension DiscoverViewController: UIPopoverPresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        return .none
     }
 }
 
@@ -128,6 +166,23 @@ fileprivate extension UIButton {
         self.tintColor = Color.golden.uiColor
         self.contentMode = .center
         self.makeCircular()
+    }
+}
+
+fileprivate class VideoPlayerViewController: MobilePlayerViewController {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        displayStatusBar()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        displayStatusBar()
+    }
+    
+    private func displayStatusBar() {
+        UIApplication.shared.isStatusBarHidden = false
+        setNeedsStatusBarAppearanceUpdate()
     }
 }
 

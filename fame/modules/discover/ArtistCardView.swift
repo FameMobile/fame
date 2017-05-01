@@ -12,7 +12,7 @@ import AVFoundation
 import PureLayout
 
 protocol VideoPlayerDelegate {
-    func display(videoViewController viewController: AVPlayerViewController)
+    func display()
 }
 
 class ArtistCardView: UIView {
@@ -29,9 +29,7 @@ class ArtistCardView: UIView {
     var professionLocationLabel: UILabel = UILabel.newAutoLayout()
     
     var coverImageView: UIImageView = UIImageView.newAutoLayout()
-    var playButton: UIButton = UIButton.newAutoLayout()
-    var playerViewController: AVPlayerViewController = AVPlayerViewController()
-    var playerLayer: AVPlayerLayer = AVPlayerLayer()
+    var playButton: UIButton = UIButton.newAutoLayout()    
     
     var replayButton: UIButton = UIButton.newAutoLayout()
     var moreDetailButton: UIButton = UIButton.newAutoLayout()
@@ -191,15 +189,6 @@ extension ArtistCardView {
         button.autoPinEdge(toSuperviewEdge: .leading, withInset: -15)
         button.autoAlignAxis(.horizontal, toSameAxisOf: self.moreDetailButton)
     }
-    
-    fileprivate func layoutVideoPlayer() {
-        self.playerViewController.videoGravity = AVLayerVideoGravityResizeAspectFill
-        
-        let layer = self.playerLayer
-        layer.bounds = self.coverImageView.bounds
-        layer.backgroundColor = Color.black.cgColor
-        layer.videoGravity = AVLayerVideoGravityResizeAspectFill
-    }
 }
 
 // MARK - Populate
@@ -210,30 +199,16 @@ extension ArtistCardView {
         self.professionLocationLabel.text = self.resume.professionInLocation
         
         self.coverImageView.image = self.resume.headShot
-        populatePlayer()
         
         let moreDetailText = stageName.isEmpty ? "more detail" : "more from \(stageName)"
         self.moreDetailButton.setTitle(moreDetailText, for: .normal)
-    }
-    
-    fileprivate func populatePlayer() {
-        if let video = self.resume.introVideo {
-            let playerItem = AVPlayerItem(asset: video)
-            let player = AVPlayer(playerItem: playerItem)
-            
-            self.playerViewController.player = player
-            self.playerLayer.player = player
-        }
     }
 }
 
 // MARK - Actions
 extension ArtistCardView {
     func playVideo() {
-        //self.videoDelegate?.display(videoViewController: self.playerViewController)
-        //let layer = self.coverImageView.layer
-        self.layer.addSublayer(self.playerLayer)
-        self.playerLayer.player?.play()
+        self.videoDelegate?.display()
     }
 }
 
